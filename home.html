@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festa de 15 anos da Agatha. Confira a data do evento, confirme presença, compre seu presente on-line e envie um lindo cartão virtual.">
+    <meta name="keywords" content="15 anos, festa, Agatha, presentes, RSVP, evento, comemoração">
+    <meta property="og:locale" content="pt-BR">
+    <meta property="og:title" content="Festa de 15 anos - Agatha">
+    <meta property="og:description" content="Todas as informações sobre a Festa de 15 anos - Agatha. Confira a data do evento, confirme presença, escolha o presente e compre on-line.">
+    <meta property="og:image" content=""> <!-- Adiconar foto ou convite -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://seusite.com"> <!-- Adiconar site -->
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Festa de 15 anos - Agatha">
+    <meta name="twitter:description" content="Confira todas as informações sobre a festa e participe desse momento especial.">
+    <meta name="twitter:image" content=""> <!-- Adiconar foto ou convite -->
+
+    <title>15 Anos Agatha</title>
+    
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link rel="canonical" href="#">     <!-- Substituir o '#' pelo nome da página -->
+    <link rel="shortcut icon" href="/images/borboleta_shinobu.jpg">
+
+    <!-- Custom CSS (se necessário) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css"> <!-- Adicione o seu CSS personalizado -->
+
+</head>
+
+<body>
+
+    <!-- <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="/images/fundo_cerejeira.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div> -->
+   
+
+    <!-- Menu de Navegação -->
+    <header class="custom-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> <!-- mx-auto garante centralização no eixo X -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#confirmar-presenca">Confirmar Presença</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lista-presentes">Lista de presentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fotos">Fotos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section py-2">
+            <h1 class="display-1">15 anos Agatha</h1>
+            <img src="/images/agatha1.jpeg" alt="Foto da Agatha" class="img-fluid mt-3">
+        </section>
+    
+        <!-- Seções do Site -->
+        <section id="home" class="home-section text-center">
+            <h2 class="display-3">Bem-vindo à minha Festa de 15 anos!</h2>
+            <div class="welcome-text px-3 py-4" id="welcome-text">Queridos amigos e familiares<br />
+                <br />
+                Esse site é uma área criada com muito amor para compartilhar com todos vocês os preparativos da minha tão aguardada Festa de 15 Anos!
+                <br />
+                <br />
+                Neste site também é possível ver minha lista de presentes. Ao clicar no link “Lista de Presentes“ (ou rolar esta página para baixo) para escolher o presente que deseja me contemplar e será redirecionado para a página da loja!<br />
+                <br />
+                Não se esqueçam de marcar o presente comprado e de confimar sua presença no evento!</div>
+        </section>       
+      
+        <section class="countdown-section text-center py-4">
+          <h2 class="display-4">Contagem regressiva para o grande dia:</h2>
+          <div id="countdown" class="countdown">
+              <div class="countdown-item">
+                  <span class="countdown-value" id="days">00</span>
+                  <span class="countdown-label">Dias</span>
+              </div>
+              <div class="countdown-item">
+                  <span class="countdown-value" id="hours">00</span>
+                  <span class="countdown-label">Horas</span>
+              </div>
+              <div class="countdown-item">
+                  <span class="countdown-value" id="minutes">00</span>
+                  <span class="countdown-label">Minutos</span>
+              </div>
+              <div class="countdown-item">
+                  <span class="countdown-value" id="seconds">00</span>
+                  <span class="countdown-label">Segundos</span>
+              </div>
+          </div>
+        </section>     
+    
+        <section class="confirmation-section container mt-5 p-4 border rounded shadow-sm">
+            <h2 class="text-center mb-4">Confirme sua Presença</h2>
+
+            <div class="nome-convidado row mb-3 align-items-center">
+              <div class="col-md-8">
+                <label for="name" class="form-label">Digite seu nome:</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Exemplo: João Silva">
+              </div>
+              <div class="col-md-4 text-md-end text-center mt-3 mt-md-0 botao-busca">
+                <button class="btn btn-primary w-100" onclick="searchName()">Buscar</button>
+              </div>
+            </div>
+          
+            <form id="update-form" style="display: none;">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <p><strong>Nome:</strong> <span id="name-display"></span></p>
+                </div>
+                <div class="col-md-6">
+                  <p><strong>Tipo:</strong> <span id="type-display"></span></p>
+                </div>
+              </div>
+          
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Exemplo: email@dominio.com">
+              </div>
+          
+              <div class="mb-3">
+                <label for="presence" class="form-label">Presença:</label>
+                <select id="presence" name="presence" class="form-select">
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+                </select>
+              </div>
+          
+              <div class="mb-3">
+                <label for="restrictions"  class="form-label">Restrições Alimentares:</label>
+                <textarea id="restrictions" name="restrictions"  class="form-control" rows="3" placeholder="Exemplo: Sem glúten, sem lactose"></textarea>
+              </div>
+          
+              <div class="mb-3">
+                <label for="observations" class="form-label">Observações:</label>
+                <textarea id="observations" name="observations" class="form-control" rows="3" placeholder="Informações adicionais"></textarea>
+              </div>
+          
+              <div class="text-center">
+                <button type="button" class="btn btn-success botao-atualizar" onclick="updateData()">Atualizar</button>
+              </div>
+            </form>
+          
+            <p id="status"  class="mt-3 text-center fw-bold"></p>
+        </section>
+                  
+    
+        <section id="lista-presentes" class="lista-presentes mt-5">
+            <h2 class="text-center mb-4">Lista de Presentes</h2>
+            <p class="text-center mb-4">Confira a lista de presentes para a Agatha e escolha o que mais gostar.</p>
+            <!-- Present List Start -->
+            <div class="container-fluid pt-5">
+                <div class="row px-xl-5">
+                    <!-- Item 1 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                        <a href="https://example.com/product1" class="present-item d-block text-center border">
+                            <div class="present-img position-relative overflow-hidden mb-2">
+                                <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                            </div>
+                            <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                            <h6 class="font-weight-semi-bold m-0">Cota 01/50</h6>
+                            <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
+                        </a>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 02/50</h6>
+                          <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 03/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 04/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 05/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 06/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 07/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 08/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 09/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                      <a href="https://example.com/product1" class="present-item d-block text-center border">
+                          <div class="present-img position-relative overflow-hidden mb-2">
+                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                          </div>
+                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
+                          <h6 class="font-weight-semi-bold m-0">Cota 10/50</h6>
+                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
+                      </a>
+                  </div>
+                    <!-- Adicione mais itens aqui -->
+                </div>
+            </div>
+            <!-- Present List End -->
+        </section>
+    
+        <!-- <section id="fotos" class="mt-5">
+            <h2>Fotos do Evento</h2>
+            <p>Veja as fotos da festa e compartilhe suas lembranças conosco!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="foto1.jpg" alt="Foto 1" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="foto2.jpg" alt="Foto 2" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="foto3.jpg" alt="Foto 3" class="img-fluid">
+                </div>
+            </div>
+        </section>         -->
+    </main>
+    
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Festa de 15 anos - Agatha. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const navbarNav = document.getElementById("navbarNav"); // Menu colapsável
+          const navbarToggler = document.querySelector(".navbar-toggler"); // Botão de menu
+      
+          // Fecha o menu ao clicar em um item de navegação
+          const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+          navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+              // Verifica se o menu está aberto, e se estiver, simula o clique para fechar
+              if (navbarNav.classList.contains("show")) {
+                navbarToggler.click();
+              }
+            });
+          });
+      
+          // Fecha o menu ao clicar fora dele
+          document.addEventListener("click", (event) => {
+            // Se o clique foi fora do menu e do botão de navegação, fecha o menu
+            if (!navbarNav.contains(event.target) && !navbarToggler.contains(event.target)) {
+              if (navbarNav.classList.contains("show")) {
+                navbarToggler.click();
+              }
+            }
+          });
+          
+          // Impede o comportamento padrão do Bootstrap, utilizando os métodos diretamente
+          navbarToggler.addEventListener("click", (event) => {
+            // Impede o Bootstrap de alternar a classe diretamente
+            event.stopPropagation();
+          });
+        });
+      </script>
+      
+      
+
+      <script>
+        function startCountdown(targetDate) {
+            const countdownElement = document.getElementById('countdown');
+            const daysSpan = document.getElementById('days');
+            const hoursSpan = document.getElementById('hours');
+            const minutesSpan = document.getElementById('minutes');
+            const secondsSpan = document.getElementById('seconds');
+    
+            function updateCountdown() {
+                const now = new Date();
+                const timeLeft = targetDate - now;
+    
+                if (timeLeft <= 0) {
+                    countdownElement.innerHTML = "<h3>Chegou o grande dia!</h3>";
+                    clearInterval(interval);
+                    return;
+                }
+    
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+                daysSpan.textContent = days;
+                hoursSpan.textContent = hours;
+                minutesSpan.textContent = minutes;
+                secondsSpan.textContent = seconds;
+            }
+    
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        }
+    
+        // Data da festa: substitua pelo dia e horário do evento
+        const targetDate = new Date('2025-05-03T20:00:00');
+        startCountdown(targetDate);
+    </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPtsIRbYFOfx75Xr_uLdANq6WFRY01e9guVqocN4docPvjSgvv_nr1sRc5LJYYtJkYGw/exec';
+        
+        async function searchName() {
+          const name = document.getElementById('name').value;
+          if (!name) {
+            alert('Por favor, digite um nome!');
+            return;
+          }
+      
+          try {
+            // Fazer requisição GET sem cabeçalhos CORS
+            const response = await fetch(`${scriptURL}?name=${encodeURIComponent(name)}`);
+            const result = await response.json();
+      
+            if (result.error) {
+              document.getElementById('status').textContent = result.error;
+              return;
+            }
+      
+            // Preenche os campos do formulário com os dados encontrados
+            document.getElementById('name-display').textContent = result.name;
+            document.getElementById('type-display').textContent = result.type;
+            document.getElementById('email').value = result.email;
+            document.getElementById('presence').value = result.presence;
+            document.getElementById('restrictions').value = result.restrictions; // Nova coluna
+            document.getElementById('observations').value = result.observations;
+      
+            // Armazena o índice da linha no elemento data-row-index
+            document.getElementById('name-display').dataset.rowIndex = result.rowIndex;
+      
+            // Exibe o formulário
+            document.getElementById('update-form').style.display = 'block';
+          } catch (error) {
+            document.getElementById('status').textContent = 'Erro ao buscar os dados: ' + error.message;
+          }
+        }
+      
+        async function updateData() {
+            const email = document.getElementById('email').value;
+            const presence = document.getElementById('presence').value;
+            const restrictions = document.getElementById('restrictions').value;
+            const observations = document.getElementById('observations').value;
+          
+            const nameDisplay = document.getElementById('name-display');
+            const rowIndex = nameDisplay.dataset.rowIndex;
+          
+            if (!rowIndex) {
+              alert('Nenhum registro encontrado para atualizar!');
+              return;
+            }
+          
+            try {
+              const response = await fetch(scriptURL, {
+                method: 'POST',
+                redirect: 'follow', // Adicionado para lidar com redirecionamentos
+                headers: {
+                  'Content-Type': 'text/plain;charset=utf-8', // Alterado para evitar preflight
+                },
+                body: JSON.stringify({
+                  rowIndex: parseInt(rowIndex, 10),
+                  email,
+                  presence,
+                  restrictions,
+                  observations,
+                }),
+              });
+          
+              const result = await response.json();
+              if (result.success) {
+                document.getElementById('status').textContent = 'Atualização realizada com sucesso!';
+              } else {
+                document.getElementById('status').textContent = result.error || 'Erro ao atualizar os dados.';
+              }
+            } catch (error) {
+              document.getElementById('status').textContent = 'Erro ao atualizar os dados: ' + error.message;
+            }
+          }
+          
+      </script>
+      
+      
+      
+    
+      
+</body>
+
+
+</html>

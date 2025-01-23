@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'Gabriola';
+    src: url('/fonts/Gabriola.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo do fundo fixo */
+html, body {
+    /* background-image: url('/images/fundo_purple.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%; */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    font-family: 'Gabriola', serif;
+    box-sizing: border-box;
+}
+
+/* Estilo do conteúdo */
+main {
+    position: relative; /* Garante que o conteúdo seja colocado acima do fundo */
+    z-index: 1; /* Coloca o conteúdo acima do fundo */
+    padding: 2.5em 2em; /* Ajusta o espaçamento dentro do conteúdo */
+    width: 100%;
+    
+}
+
+/* Estilo geral do cabeçalho */
+header {
+    background-color: rgba(219, 186, 243, 0.9); /* Fundo transparente */
+    padding: 1em 2em; /* Ajuste o padding para o cabeçalho */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre o conteúdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    position: fixed;
+}
+
+h1, h2, h3 .highlight {
+    font-family: 'Ephesis', cursive;
+    font-weight: lighter;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa toda a altura da tela */
+    /* overflow: hidden; */
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    min-width: 100vw; /* Garante que cubra a largura da tela */
+    min-height: 100vh; /* Garante que cubra a altura da tela */
+    object-fit: contain; /* Ajusta o vídeo para cobrir o espaço sem distorção */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    align-items: center; /* Alinha verticalmente os itens */
+    z-index: 10; /* Garante que fique acima do fundo */
+}
+
+/* Estilo do ícone de hambúrguer */
+.hamburger-menu {
+    display: none; /* Inicialmente escondido em telas maiores */
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center; /* Alinha as barras ao centro */
+    align-items: center; /* Alinha as barras ao centro */
+    height: 30px; /* Altura para centralizar as barras */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #333;
+}
+
+/* Estilo da lista de links */
+.navbar-links {
+    list-style: none; /* Remove a lista padrão */
+    display: flex; /* Exibe os links em linha */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estilo dos links */
+.navbar-links li {
+    margin: 0 15px; /* Espaço entre os links */
+}
+
+.navbar-links a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor do texto */
+    font-size: 1.2em; /* Tamanho da fonte */
+    padding: 5px 10px; /* Espaçamento interno para os links */
+}
+
+/* Alteração de cor quando o link é hover */
+.navbar-links a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.hero-section {
+    text-align: center;
+}
+
+.display-1 {
+    font-size: 5em;
+    margin-bottom: 0.2em;    
+}
+
+.display-2 {
+    font-size: 5em;
+    margin-top: 0;
+}
+
+.hero-section img {
+    width: 50%; /* Ajusta a largura para 50% do container */
+    max-width: 500px; /* Limita a largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Borda arredondada opcional */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+.home-section {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.display-3 {
+    font-size: 3em;
+}
+
+.welcome-text {
+    font-size: 2em;
+    /* background-color: rgba(219, 186, 243, 0.9); */
+    padding: 1em 2em; /* Ajuste o padding para o cabeçalho */
+}
+
+.countdown-section {
+    font-family: 'Gabriola', serif;
+    background-color:transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+.display-4 {
+    font-size: 3em;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: transparent; */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-span {
+    background-color: rgba(219, 186, 243, 0.9);
+}
+
+.countdown span {
+    font-size: 2.5em;
+    color: rgba(146, 159, 142, 1);
+}
+
+.confirmation-section {
+    padding: 0.5em;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: none;
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.confirmation-section label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.nome-convidado {
+    width: 100%;
+}
+
+.confirmation-section input,
+.confirmation-section textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.confirmation-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.confirmation-section button {
+    padding: 0.25em 0.75em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.75em;
+    cursor: pointer;
+    font-family: 'Gabriola';
+    font-size: 1em;
+}
+
+.confirmation-section button:hover {
+    background-color: #0056b3;
+}
+
+.lista-presentes {
+    padding: 0.5em;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: none;
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.present-item {
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+.present-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4
+}
+
+
+
+/* Responsividade: Regras para telas menores */
+@media screen and (max-width: 768px) {
+    /* Ajuste do fundo para telas menores */
+    body {
+        background-position: left top; /* Ajusta a posição para cima em telas menores */
+        width: 100%; /* Garante que o body ocupe 100% da largura */
+        margin: 0; /* Remove margens */
+        padding: 0; /* Remove paddings */
+    }
+
+    .navbar {
+        flex-direction: column; /* Muda os itens para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .navbar-links {
+        display: none; /* Esconde a lista de links inicialmente */
+        flex-direction: column;
+        width: 11em;
+        background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+        position: fixed; /* Ocupa toda a tela */
+        top: 0;
+        left: 0;
+        height: 11em;
+        padding: 20px;
+        z-index: 1050;
+    }
+
+    .navbar-links li {
+        margin: 10px 0; /* Adiciona espaço entre os links */
+    }
+
+    .navbar-links a {
+        width: 100%; /* Faz os links ocuparem toda a largura disponível */
+        text-align: left; /* Alinha os textos à esquerda */
+        color: white; /* Cor do texto */
+    }
+
+    /* Exibe o ícone de hambúrguer em telas pequenas */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Quando o menu é aberto, exibe a lista de links */
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .confirmation-section {
+        width: 100%;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        padding: 1em;
+        box-sizing: border-box;
+    }
+}

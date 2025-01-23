@@ -1,0 +1,298 @@
+@font-face {
+    font-family: 'Gabriola';
+    src: url('/fonts/Gabriola.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gabriola', serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 4.375rem; /* Compensa o espaço ocupado pelo header fixo */
+    background-image: url(/images/fundo.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: 'Ephesis', cursive;
+    font-weight: lighter;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.custom-header {
+    background-color: rgba(219, 186, 243, 0.9);
+    padding: 0 1rem;
+    width: 100%;
+    z-index: 1030; /* Garante que está acima do conteúdo */
+    position: fixed; /* Faz o header fixo no topo */
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  }
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente os itens do menu */
+    width: 100%;
+    margin: 0; /* Remove espaçamento extra */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centraliza os itens no nav */
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+.navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Gabriola';
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;  /* Ajuste para o sublinhado não sobrepor o texto */
+    width: 0%;      /* Inicialmente sem largura */
+    height: 0.125rem;
+    background-color: #000;
+    border-radius: 0.25rem;
+    transition: width 0.25s ease; /* Animação de crescimento do sublinhado */
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;   /* Faz o sublinhado crescer até a largura total do item */
+}
+
+.navbar-toggler {
+    border: none; /* Remove o contorno padrão */
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Muda a cor de fundo ao passar o mouse */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remove o foco padrão */
+}
+
+.hero-section {
+    text-align: center; /* Centraliza todo o conteúdo */
+    padding: 2rem; /* Espaçamento interno */
+}
+
+/* Estilo para os títulos */
+.hero-section h1 {    
+    font-size: 5rem;
+    color: #000;
+    padding: 0.15rem; 
+}
+
+/* Estilo para a imagem */
+.hero-section img {
+    max-height: 70vh; /* Limita a altura da imagem a 70% da altura da tela */
+    width: auto; /* Preserva a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem seja completamente visível */
+}
+
+.display-3 {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.welcome-text {
+    font-family: 'Gabriola';
+    font-size: 2rem;
+    background-color: rgba(219, 186, 243, 0.9);
+    padding: 1rem 2rem;
+}
+
+
+/* Configuração da seção */
+.countdown-section {
+    font-family: 'Gabriola', serif;
+    background-color: transparent;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+/* Título */
+.display-4 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Layout do contador */
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Impede que os elementos quebrem para a próxima linha */
+    overflow: hidden; /* Evita quebra de layout */
+}
+
+/* Estilização dos itens */
+.countdown-item {
+    text-align: center;
+    flex: 1 1 auto; /* Permite que os itens diminuam de tamanho conforme necessário */
+    max-width: 12rem; /* Limita o tamanho máximo */
+    min-width: 4rem; /* Tamanho mínimo para manter a legibilidade */
+}
+
+/* Números */
+.countdown-value {
+    display: block;
+    font-size: 5rem;
+}
+
+/* Rótulos */
+.countdown-label {
+    font-size: 2.5rem;
+}
+
+.confirmation-section {
+    background-color: rgba(219, 186, 243, 0.9);
+    font-size: 2rem;
+
+}
+
+.confirmation-section h2 {
+    color: #343a40; /* Título mais escuro */
+    font-size: 3rem;
+}
+
+.form-control{
+    font-size: 2rem !important;
+}
+
+.form-select {
+    font-size: 2rem !important;  
+}
+
+#status {
+    color: #28a745; /* Verde para sucesso */
+}
+
+#status.error {
+    color: #dc3545; /* Vermelho para erro */
+}
+
+button {
+    font-size: 2rem !important;
+}
+
+.botao-busca {
+    padding-top: 3.5rem;
+}
+
+.botao-atualizar {
+    width: 30%;    
+}
+
+.lista-presentes h2{
+    font-size: 3rem;
+}
+
+.lista-presentes p{
+    font-size: 2rem;
+}
+
+/* .lista-presentes h6{
+    font-size: 1rem;
+} */
+
+.present-item h6 {
+    font-size: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Adicionar efeito de hover na div */
+.present-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Opção de arredondar os cantos */
+}
+
+/* Efeito de hover para aumentar de tamanho */
+.present-item:hover {
+    transform: scale(1.05); /* Aumenta o tamanho */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar destaque */
+}
+
+.present-item:hover h6{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remover sublinhado do link */
+.present-item {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor original */
+    padding: 0.25rem;
+}
+
+.preco {
+    font-size: 1.5rem !important;
+    color: red !important;
+    font-weight: bold;
+    text-align: start;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 576px) {
+    .countdown-item {
+        max-width: 5rem; /* Reduz o tamanho máximo dos itens */
+    }
+    .countdown-value {
+        font-size: 3rem; /* Diminui o tamanho dos números */
+    }
+    .countdown-label {
+        font-size: 1.5rem; /* Diminui o tamanho dos rótulos */
+    }
+    .confirmation-section {
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 1.5rem !important;
+    }
+    
+    .form-select {
+        font-size: 1.5rem !important;  
+    }
+    button {
+        font-size: 1.5rem !important;
+    }
+    .botao-busca {
+        padding-top: 0;
+    }
+    .botao-atualizar {
+        width:100%;    
+    }
+}
