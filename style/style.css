@@ -104,6 +104,14 @@ h1, h2, h3 {
     outline: none; /* Remove o foco padrão */
 }
 
+.texto-com-sombra {
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+
 .hero-section {
     text-align: center; /* Centraliza todo o conteúdo */
     padding: 2rem; /* Espaçamento interno */
@@ -213,9 +221,24 @@ button {
 }
 
 .botao-atualizar {
-    width: 30%;    
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;}
+
+.botao-cancelar {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
 }
 
+.botao-ok {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
+}
+
+
+/* Estio lista de presentes*/
 .lista-presentes h2{
     font-size: 3rem;
 }
@@ -224,46 +247,188 @@ button {
     font-size: 2rem;
 }
 
-/* .lista-presentes h6{
-    font-size: 1rem;
-} */
+.present-box {
+    padding: 0.5rem;
+}
+
+/* Estilo base do item */
+.present-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    height: 23rem; /* Define uma altura mínima */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
 .present-item h6 {
     font-size: 1rem;
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
-/* Adicionar efeito de hover na div */
-.present-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px; /* Opção de arredondar os cantos */
-}
-
-/* Efeito de hover para aumentar de tamanho */
+/* Hover para destacar todo o bloco */
 .present-item:hover {
-    transform: scale(1.05); /* Aumenta o tamanho */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar destaque */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.present-item:hover h6{
+/* Hover no texto */
+.present-item:hover h6 {
+    color: green;
     text-decoration: none;
-    color: inherit;
 }
 
-/* Remover sublinhado do link */
-.present-item {
-    text-decoration: none;
-    color: inherit; /* Mantém a cor original */
-    padding: 0.25rem;
-}
-
+/* Preço destacado */
 .preco {
     font-size: 1.5rem !important;
     color: red !important;
     font-weight: bold;
     text-align: start;
 }
+
+/* Estilo do checkbox */
+.checkbox-container input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.present-img {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente no topo */
+    align-items: flex-start; /* Mantém a imagem no topo */
+    height: 100%; /* Mantém o tamanho da div */
+    width: 100%;
+}
+
+.present-img img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o limite da div */
+    height: 14rem; /* Mantém a proporção */
+    object-fit: contain; /* Ajusta a imagem dentro do espaço */  
+}
+
+/* Espaçamento entre os elementos do rodapé */
+.present-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 0;
+    padding: 0.2rem;
+}
+
+.present-box input[type="checkbox"] {
+    transform: scale(1.2); /* Aumenta o tamanho da checkbox */
+    cursor: pointer; /* Altera o cursor para pointer */
+}
+
+.present-box label {
+    font-size: 14px;
+    cursor: pointer; /* Permite clicar no texto do label */
+    padding: 0.2rem;
+}
+
+/* Estilo base do checkbox */
+.checkbox-container input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão do navegador */
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Quando o checkbox é marcado */
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: green; /* Cor de fundo verde */
+    border-color: green; /* Borda verde */
+}
+
+/* Adicionando um ícone de "check" personalizado */
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '✓'; /* Ícone de check */
+    color: white;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+#giftModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    height: 100hv;
+    overflow: hidden;
+}
+
+#modalContent {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 700px;
+    position: relative;
+    display: block; /* Assegura que o conteúdo não seja escondido */
+    opacity: 1; /* Garante visibilidade */
+    z-index: 1051; /* Garante que o conteúdo fique acima do fundo */
+}
+
+.modal-content {
+    margin: auto;
+    max-width: 500px; /* Ajuste conforme necessário */
+}
+
+.gift-modal-button {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
+}
+
+#nameInputSection {
+    font-family: 'Gabriola', serif;
+    font-size: 2rem;
+}
+
+#thankYouMessage {
+    font-family: 'Gabriola', serif;
+    font-size: 2rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-modal-button-close {
+    display: none;
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
+    align-self: center;
+}
+
+
 
 /* Ajustes para telas pequenas */
 @media (max-width: 576px) {
@@ -294,5 +459,11 @@ button {
     }
     .botao-atualizar {
         width:100%;    
+    }
+    .preco {
+        font-size: 1rem !important;
+        color: red !important;
+        font-weight: bold;
+        text-align: start;
     }
 }

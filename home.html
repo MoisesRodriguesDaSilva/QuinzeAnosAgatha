@@ -76,14 +76,14 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section py-2">
-            <h1 class="display-1">15 anos Agatha</h1>
+        <section id="home" class="hero-section py-2">
+            <h1 class="display-1 texto-com-sombra">15 anos Agatha</h1>
             <img src="/images/agatha1.jpeg" alt="Foto da Agatha" class="img-fluid mt-3">
         </section>
     
         <!-- Seções do Site -->
-        <section id="home" class="home-section text-center">
-            <h2 class="display-3">Bem-vindo à minha Festa de 15 anos!</h2>
+        <section class="home-section text-center">
+            <h2 class="display-3 texto-com-sombra">Bem-vindo à minha Festa de 15 anos!</h2>
             <div class="welcome-text px-3 py-4" id="welcome-text">Queridos amigos e familiares<br />
                 <br />
                 Esse site é uma área criada com muito amor para compartilhar com todos vocês os preparativos da minha tão aguardada Festa de 15 Anos!
@@ -95,28 +95,29 @@
         </section>       
       
         <section class="countdown-section text-center py-4">
-          <h2 class="display-4">Contagem regressiva para o grande dia:</h2>
+          <h2 class="display-4 texto-com-sombra">Contagem regressiva para o grande dia:</h2>
           <div id="countdown" class="countdown">
               <div class="countdown-item">
-                  <span class="countdown-value" id="days">00</span>
-                  <span class="countdown-label">Dias</span>
+                  <span class="countdown-value texto-com-sombra" id="days">00</span>
+                  <span class="countdown-label texto-com-sombra">Dias</span>
               </div>
               <div class="countdown-item">
-                  <span class="countdown-value" id="hours">00</span>
-                  <span class="countdown-label">Horas</span>
+                  <span class="countdown-value texto-com-sombra" id="hours">00</span>
+                  <span class="countdown-label texto-com-sombra">Horas</span>
               </div>
               <div class="countdown-item">
-                  <span class="countdown-value" id="minutes">00</span>
-                  <span class="countdown-label">Minutos</span>
+                  <span class="countdown-value texto-com-sombra" id="minutes">00</span>
+                  <span class="countdown-label texto-com-sombra">Minutos</span>
               </div>
               <div class="countdown-item">
-                  <span class="countdown-value" id="seconds">00</span>
-                  <span class="countdown-label">Segundos</span>
+                  <span class="countdown-value texto-com-sombra" id="seconds">00</span>
+                  <span class="countdown-label texto-com-sombra">Segundos</span>
               </div>
           </div>
         </section>     
     
-        <section class="confirmation-section container mt-5 p-4 border rounded shadow-sm">
+        <!-- ############ Confirmação de presença ############ -->
+        <section id="confirmar-presenca" class="confirmation-section container mt-5 p-4 border rounded shadow-sm">
             <h2 class="text-center mb-4">Confirme sua Presença</h2>
 
             <div class="nome-convidado row mb-3 align-items-center">
@@ -164,30 +165,82 @@
           
               <div class="text-center">
                 <button type="button" class="btn btn-success botao-atualizar" onclick="updateData()">Atualizar</button>
+                <button type="button" class="btn btn-danger botao-cancelar" onclick="cancelForm()">Cancelar</button>
               </div>
+              
+              
+              
             </form>
-          
+            
             <p id="status"  class="mt-3 text-center fw-bold"></p>
+            
+            <div class="text-center" id="ok-button-container" style="display: none;">
+                <button class="btn btn-success botao-ok" onclick="closeForm()">OK</button>
+              </div>
         </section>
                   
     
         <section id="lista-presentes" class="lista-presentes mt-5">
-            <h2 class="text-center mb-4">Lista de Presentes</h2>
-            <p class="text-center mb-4">Confira a lista de presentes para a Agatha e escolha o que mais gostar.</p>
+            <h2 class="text-center mb-4 texto-com-sombra">Lista de Presentes</h2>
+            <p class="text-center mb-4 texto-com-sombra">
+              Confira a lista de presentes para a Agatha e escolha o que mais gostar.<br>
+              Visite os sites e escolha com o que gostaria de presenteá-la.<br>
+              Só não esqueça de marcar que comprou para que não haja presentes repetidos, OK?
+            </p>            
             <!-- Present List Start -->
             <div class="container-fluid pt-5">
                 <div class="row px-xl-5">
                     <!-- Item 1 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-03-box">
+                      <div class="present-item d-block text-center border">
+                            <a href="https://shopee.com.br/uniforme-cosplay-kimetsu-demon-slayer-roupa-preta-i.405529182.22397762233?sp_atk=355df0c5-9896-4b98-89ee-85462d8960b1&xptdk=355df0c5-9896-4b98-89ee-85462d8960b1" class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/03_uniforme_cacadores_oni.png" alt="Product 1">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Uniforme cosplay kimetsu demon slayer roupa preta (calça blusa longa, tamanho M adulto)</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 98,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-03" name="gift-line-03" onchange="openModal('gift-line-03')">
+                                    <label for="gift-line-03" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             
+                  <!-- Item 2 -->
+                  <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box">
+                    <div class="present-item d-block text-center border">
+                        <a href="https://shopee.com.br/1-Conjunto-Haikyuu-!-Hinata-kageyama-Karasuno-Camisa-Uniforme-De-V%C3%B4lei-Jersey-Cosplay-Costume-Top-Pants-Vestu%C3%A1rio-Esportivo-i.539644212.28354252245?sp_atk=77d62f76-9668-4833-be6b-ef9c1689e71e&xptdk=77d62f76-9668-4833-be6b-ef9c1689e71e" class="d-block text-decoration-none">
+                            <div class="present-img position-relative overflow-hidden mb-2">
+                                <img class="img-fluid" src="/images/presentes//04_uniforme_haikyu.png" alt="Product 1">
+                            </div>
+                            <h6 class="font-weight-semi-bold m-0">1 Conjunto Haikyuu ! Hinata kageyama Karasuno Camisa Uniforme De Vôlei Jersey Cosplay Costume Vestuário Esportivo (Tamanho M, nº 4)</h6>
+                        </a>
+                        <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                            <h6 class="font-weight-semi-bold preco">R$ 88,98</h6>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="gift-line-04" name="gift-line-04" onchange="openModal('gift-line-04')">
+                                <label for="gift-line-04" class="ml-2">Selecionar</label>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    <!-- <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box">
                         <a href="https://example.com/product1" class="present-item d-block text-center border">
                             <div class="present-img position-relative overflow-hidden mb-2">
                                 <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
                             </div>
                             <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
                             <h6 class="font-weight-semi-bold m-0">Cota 01/50</h6>
-                            <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
                         </a>
-                    </div>
+                        <div >
+                          <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
+                          <input type="checkbox" id="gift1" name="gift1">
+                          <label for="gift1">Selecionar</label>
+                        </div>
+                    </div> -->
                     <!-- Item 2 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
                       <a href="https://example.com/product1" class="present-item d-block text-center border">
@@ -263,7 +316,7 @@
                           <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
                           <h6 class="font-weight-semi-bold m-0">Cota 08/50</h6>
                           <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
+                      </a>                      
                   </div>
                     <!-- Item 2 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
@@ -291,6 +344,31 @@
                 </div>
             </div>
             <!-- Present List End -->
+
+            <!-- Modal -->
+            <div id="giftModal" class="modal" style="display: none;">
+                <div id="modalContent" class="modal-content">
+                    <p id="giftDetails"></p>
+                    <div id="modalActions">
+                        <button id="confirmGift" class="btn btn-primary gift-modal-button" onclick="showNameInput()">Sim</button>
+                        <button class="btn btn-primary gift-modal-button" onclick="cancelGift(document.getElementById('confirmGift').getAttribute('data-presentId'))">Cancelar</button>
+
+                    </div>
+
+                    <!-- Campo para nome, oculto inicialmente -->
+                    <div id="nameInputSection" style="display: none;">
+                        <label for="giftName">Digite seu nome:</label>
+                        <input type="text" id="giftName">
+                        <button class="btn btn-primary gift-modal-button" onclick="confirmGift()">Confirmar</button>
+                        <button class="btn btn-primary gift-modal-button" onclick="cancelNameInput()">Cancelar</button>
+                    </div>
+
+                    <!-- Mensagem de agradecimento -->
+                    <div id="thankYouMessage" style="display: none;">
+                        <button class="btn btn-primary gift-modal-button-close" onclick="closeModal()">OK</button>
+                    </div>
+                </div>
+            </div>
         </section>
     
         <!-- <section id="fotos" class="mt-5">
@@ -316,169 +394,9 @@
         <p>&copy; 2024 Festa de 15 anos - Agatha. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- JavaScript do Bootstrap -->
+    <!-- JavaScript do Bootstrap-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const navbarNav = document.getElementById("navbarNav"); // Menu colapsável
-          const navbarToggler = document.querySelector(".navbar-toggler"); // Botão de menu
-      
-          // Fecha o menu ao clicar em um item de navegação
-          const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-          navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-              // Verifica se o menu está aberto, e se estiver, simula o clique para fechar
-              if (navbarNav.classList.contains("show")) {
-                navbarToggler.click();
-              }
-            });
-          });
-      
-          // Fecha o menu ao clicar fora dele
-          document.addEventListener("click", (event) => {
-            // Se o clique foi fora do menu e do botão de navegação, fecha o menu
-            if (!navbarNav.contains(event.target) && !navbarToggler.contains(event.target)) {
-              if (navbarNav.classList.contains("show")) {
-                navbarToggler.click();
-              }
-            }
-          });
-          
-          // Impede o comportamento padrão do Bootstrap, utilizando os métodos diretamente
-          navbarToggler.addEventListener("click", (event) => {
-            // Impede o Bootstrap de alternar a classe diretamente
-            event.stopPropagation();
-          });
-        });
-      </script>
-      
-      
-
-      <script>
-        function startCountdown(targetDate) {
-            const countdownElement = document.getElementById('countdown');
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
-    
-            function updateCountdown() {
-                const now = new Date();
-                const timeLeft = targetDate - now;
-    
-                if (timeLeft <= 0) {
-                    countdownElement.innerHTML = "<h3>Chegou o grande dia!</h3>";
-                    clearInterval(interval);
-                    return;
-                }
-    
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-    
-                daysSpan.textContent = days;
-                hoursSpan.textContent = hours;
-                minutesSpan.textContent = minutes;
-                secondsSpan.textContent = seconds;
-            }
-    
-            updateCountdown();
-            const interval = setInterval(updateCountdown, 1000);
-        }
-    
-        // Data da festa: substitua pelo dia e horário do evento
-        const targetDate = new Date('2025-05-03T20:00:00');
-        startCountdown(targetDate);
-    </script>
-    
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPtsIRbYFOfx75Xr_uLdANq6WFRY01e9guVqocN4docPvjSgvv_nr1sRc5LJYYtJkYGw/exec';
-        
-        async function searchName() {
-          const name = document.getElementById('name').value;
-          if (!name) {
-            alert('Por favor, digite um nome!');
-            return;
-          }
-      
-          try {
-            // Fazer requisição GET sem cabeçalhos CORS
-            const response = await fetch(`${scriptURL}?name=${encodeURIComponent(name)}`);
-            const result = await response.json();
-      
-            if (result.error) {
-              document.getElementById('status').textContent = result.error;
-              return;
-            }
-      
-            // Preenche os campos do formulário com os dados encontrados
-            document.getElementById('name-display').textContent = result.name;
-            document.getElementById('type-display').textContent = result.type;
-            document.getElementById('email').value = result.email;
-            document.getElementById('presence').value = result.presence;
-            document.getElementById('restrictions').value = result.restrictions; // Nova coluna
-            document.getElementById('observations').value = result.observations;
-      
-            // Armazena o índice da linha no elemento data-row-index
-            document.getElementById('name-display').dataset.rowIndex = result.rowIndex;
-      
-            // Exibe o formulário
-            document.getElementById('update-form').style.display = 'block';
-          } catch (error) {
-            document.getElementById('status').textContent = 'Erro ao buscar os dados: ' + error.message;
-          }
-        }
-      
-        async function updateData() {
-            const email = document.getElementById('email').value;
-            const presence = document.getElementById('presence').value;
-            const restrictions = document.getElementById('restrictions').value;
-            const observations = document.getElementById('observations').value;
-          
-            const nameDisplay = document.getElementById('name-display');
-            const rowIndex = nameDisplay.dataset.rowIndex;
-          
-            if (!rowIndex) {
-              alert('Nenhum registro encontrado para atualizar!');
-              return;
-            }
-          
-            try {
-              const response = await fetch(scriptURL, {
-                method: 'POST',
-                redirect: 'follow', // Adicionado para lidar com redirecionamentos
-                headers: {
-                  'Content-Type': 'text/plain;charset=utf-8', // Alterado para evitar preflight
-                },
-                body: JSON.stringify({
-                  rowIndex: parseInt(rowIndex, 10),
-                  email,
-                  presence,
-                  restrictions,
-                  observations,
-                }),
-              });
-          
-              const result = await response.json();
-              if (result.success) {
-                document.getElementById('status').textContent = 'Atualização realizada com sucesso!';
-              } else {
-                document.getElementById('status').textContent = result.error || 'Erro ao atualizar os dados.';
-              }
-            } catch (error) {
-              document.getElementById('status').textContent = 'Erro ao atualizar os dados: ' + error.message;
-            }
-          }
-          
-      </script>
-      
-      
-      
-    
-      
 </body>
-
-
 </html>
