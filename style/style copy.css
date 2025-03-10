@@ -272,58 +272,272 @@ h1, h2, h3 .highlight {
 
 
 
-/* Responsividade: Regras para telas menores */
-@media screen and (max-width: 768px) {
-    /* Ajuste do fundo para telas menores */
-    body {
-        background-position: left top; /* Ajusta a posição para cima em telas menores */
-        width: 100%; /* Garante que o body ocupe 100% da largura */
-        margin: 0; /* Remove margens */
-        padding: 0; /* Remove paddings */
-    }
+/* Fontes */
+@font-face {
+    font-family: 'Gabriola';
+    src: url('/fonts/Gabriola.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    .navbar {
-        flex-direction: column; /* Muda os itens para coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
+body {
+    font-family: 'Gabriola', serif;
+    margin: 0;
+    padding: 0 0 0 4.375rem;
+    background: url(/images/fundo.jpeg) center / cover fixed;
+    height: 100vh;
+    position: relative;
+}
 
-    .navbar-links {
-        display: none; /* Esconde a lista de links inicialmente */
-        flex-direction: column;
-        width: 11em;
-        background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-        position: fixed; /* Ocupa toda a tela */
-        top: 0;
-        left: 0;
-        height: 11em;
-        padding: 20px;
-        z-index: 1050;
-    }
+h1, h2, h3 {
+    font-family: 'Ephesis', cursive;
+    font-weight: lighter;
+}
 
-    .navbar-links li {
-        margin: 10px 0; /* Adiciona espaço entre os links */
-    }
+/* Estilos de vídeo de fundo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
-    .navbar-links a {
-        width: 100%; /* Faz os links ocuparem toda a largura disponível */
-        text-align: left; /* Alinha os textos à esquerda */
-        color: white; /* Cor do texto */
-    }
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
 
-    /* Exibe o ícone de hambúrguer em telas pequenas */
-    .hamburger-menu {
-        display: flex;
-    }
+/* Cabeçalho */
+.custom-header {
+    background-color: rgba(219, 186, 243, 0.9);
+    padding: 0 1rem;
+    width: 100%;
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
 
-    /* Quando o menu é aberto, exibe a lista de links */
-    .navbar-links.open {
-        display: flex;
-    }
+/* Navbar */
+.navbar, .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
 
-    .confirmation-section {
-        width: 100%;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        padding: 1em;
-        box-sizing: border-box;
-    }
+.navbar-nav {
+    gap: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Gabriola';
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    width: 0;
+    height: 0.125rem;
+    background-color: #000;
+    border-radius: 0.25rem;
+    transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botões */
+button, .form-control, .form-select {
+    font-size: 2rem !important;
+}
+
+.botao-busca {
+    padding-top: 3.5rem;
+}
+
+.botao-atualizar, .botao-cancelar, .botao-ok {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
+}
+
+/* Texto com sombra */
+.texto-com-sombra {
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Seções */
+.hero-section, .countdown-section, .confirmation-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    color: #000;
+    padding: 0.15rem;
+}
+
+.hero-section img {
+    max-height: 70vh;
+    width: auto;
+    object-fit: contain;
+}
+
+.welcome-text {
+    font-family: 'Gabriola';
+    font-size: 2rem;
+    background-color: rgba(219, 186, 243, 0.9);
+    padding: 1rem 2rem;
+}
+
+.display-3, .display-4 {
+    font-size: 3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.countdown-item {
+    text-align: center;
+    flex: 1 1 auto;
+    max-width: 12rem;
+    min-width: 4rem;
+}
+
+.countdown-value {
+    display: block;
+    font-size: 5rem;
+}
+
+.countdown-label {
+    font-size: 2.5rem;
+}
+
+.confirmation-section {
+    background-color: rgba(219, 186, 243, 0.9);
+    font-size: 2rem;
+}
+
+.confirmation-section h2 {
+    color: #343a40;
+    font-size: 3rem;
+}
+
+#status {
+    color: #28a745;
+}
+
+#status.error {
+    color: #dc3545;
+}
+
+/* Lista de Presentes */
+.lista-presentes h2 {
+    font-size: 3rem;
+}
+
+.lista-presentes p {
+    font-size: 2rem;
+}
+
+.present-box {
+    padding: 0.5rem;
+}
+
+.present-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    background-color: rgba(219, 186, 243, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    height: 21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.present-item h6 {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.present-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.present-item:hover h6 {
+    color: green;
+}
+
+.preco {
+    font-size: 1.5rem !important;
+    color: red !important;
+    font-weight: bold;
+    text-align: start;
+}
+
+.present-img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.present-img img {
+    max-width: 100%;
+    height: 14rem;
+    object-fit: contain;
+}
+
+.present-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem;
+}
+
+/* Checkbox */
+.checkbox-container input[type="checkbox"], .present-box input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.checkbox-container label, .present-box label {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.2rem;
 }

@@ -188,7 +188,6 @@ h1, h2, h3 {
 .confirmation-section {
     background-color: rgba(219, 186, 243, 0.9);
     font-size: 2rem;
-
 }
 
 .confirmation-section h2 {
@@ -255,9 +254,9 @@ button {
 .present-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
-    background-color: white;
+    background-color: rgba(219, 186, 243, 0.9);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 0.5rem;
     height: 23rem; /* Define uma altura mínima */
     display: flex;
     flex-direction: column;
@@ -428,7 +427,77 @@ button {
     align-self: center;
 }
 
+#loadMoreBtn {
+    width: 100%;
+    max-width: 13rem;
+    margin: 0.5rem 0;
+    align-self: center;
+}
 
+/* Informações da festa */
+.festa-section {
+    background-color: none;
+    padding: 60px 0;
+}
+.festa-section p {
+    font-size: 2rem;
+}
+.info-box {
+    background-color: rgba(219, 186, 243, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 14rem;
+}
+
+.info-text {
+    font-size: 1.5rem !important; /* Ou ajuste conforme necessário */
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+}
+.info-box i {
+    color: #d63384;
+}
+
+/* Grid responsivo com 10 imagens por linha */
+.foto-item {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.foto-item:hover {
+    transform: scale(1.1);
+}
+
+/* Ajusta o tamanho da imagem dentro do carrossel */
+.carousel-item img {
+    max-height: 90vh; /* 90% da altura da tela */
+    width: auto; /* Mantém a proporção */
+    margin: auto;
+}
+
+/* Ajusta os botões de navegação do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.fotos-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Para quebrar linha se houver muitas imagens */
+    gap: 10px; /* Espaçamento entre as imagens */
+    height: 100%; /* Certifique-se de definir uma altura para o alinhamento vertical funcionar */
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
 
 /* Ajustes para telas pequenas */
 @media (max-width: 576px) {

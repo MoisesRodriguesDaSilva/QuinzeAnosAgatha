@@ -194,7 +194,7 @@ function disableSearchButtonAfterDate(date) {
 }
 
 // Exemplo de como chamar a função (data após 01 de Janeiro de 2025)
-disableSearchButtonAfterDate('2025-02-22');
+disableSearchButtonAfterDate('2025-04-10');
 
       
 // Função para abrir a modal com detalhes do presente
@@ -343,4 +343,77 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error(`Erro ao carregar status do presente ${presentId}:`, error));
     });
+});
+
+// Botão mostrar mais presentes
+
+document.addEventListener("DOMContentLoaded", function () {
+    const itemsPerBatch = 18; // Mostra de 3 em 3 linhas (cada linha tem 6)
+    const presentBoxes = document.querySelectorAll(".present-box");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    // Esconde todos os itens extras
+    presentBoxes.forEach((box, index) => {
+        if (index >= itemsPerBatch) {
+            box.style.display = "none";
+        }
+    });
+
+    let visibleCount = itemsPerBatch;
+
+    loadMoreBtn.addEventListener("click", function () {
+        // Exibe mais 18 itens
+        for (let i = visibleCount; i < visibleCount + itemsPerBatch; i++) {
+            if (presentBoxes[i]) {
+                presentBoxes[i].style.display = "block";
+            }
+        }
+
+        visibleCount += itemsPerBatch;
+
+        // Se todos os itens já foram exibidos, esconde o botão
+        if (visibleCount >= presentBoxes.length) {
+            loadMoreBtn.style.display = "none";
+        }
+    });
+});
+
+// Fotos da festa
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fotos = document.querySelectorAll(".foto-item");
+    const modal = new bootstrap.Modal(document.getElementById("fotoModal"));
+    const carouselInner = document.querySelector("#carouselFotos .carousel-inner");
+    const carouselElement = document.getElementById("carouselFotos");
+    let currentIndex = 0;
+
+    fotos.forEach((foto, index) => {
+        foto.addEventListener("click", function () {
+            currentIndex = index;
+            abrirCarrossel();
+        });
+    });
+
+    function abrirCarrossel() {
+        carouselInner.innerHTML = "";
+        
+        fotos.forEach((foto, index) => {
+            const isActive = index === currentIndex ? "active" : "";
+            const imgSrc = foto.getAttribute("src");
+            const carouselItem = `
+                <div class="carousel-item ${isActive}">
+                    <img src="${imgSrc}" class="d-block w-100" alt="Foto ${index + 1}">
+                </div>
+            `;
+            carouselInner.innerHTML += carouselItem;
+        });
+
+        // Ativa o carrossel manualmente
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: false, // Impede que mude automaticamente
+            wrap: true // Permite voltar para a primeira imagem ao chegar na última
+        });
+
+        modal.show();
+    }
 });

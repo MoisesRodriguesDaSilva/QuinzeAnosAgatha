@@ -39,15 +39,14 @@
 
 <body>
 
-    <!-- <div class="video-background">
+    <div class="video-background">
         <video autoplay loop muted playsinline>
             <source src="/images/fundo_cerejeira.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
-    </div> -->
+    </div>
    
-
-    <!-- Menu de Navegação -->
+    <!-- ############ Menu de Navegação ############ -->
     <header class="custom-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -63,7 +62,10 @@
                             <a class="nav-link" href="#confirmar-presenca">Confirmar Presença</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#lista-presentes">Lista de presentes</a>
+                            <a class="nav-link" href="#lista-presentes">Lista de presentes vituais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#festa">Informações</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#fotos">Fotos</a>
@@ -75,132 +77,149 @@
     </header>   
 
     <main>
-        <!-- Hero Section -->
+        <!-- ############ Hero Section ############ -->
         <section id="home" class="hero-section py-2">
             <h1 class="display-1 texto-com-sombra">15 anos Agatha</h1>
-            <img src="/images/agatha1.jpeg" alt="Foto da Agatha" class="img-fluid mt-3">
+            
+            <!-- Carousel -->
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/agatha1.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/agatha2.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/agatha3.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 3">
+                    </div>
+                </div>
+            </div>
         </section>
-    
-        <!-- Seções do Site -->
+
+
+        <!-- ############ Seções do Site ############ -->
         <section class="home-section text-center">
             <h2 class="display-3 texto-com-sombra">Bem-vindo à minha Festa de 15 anos!</h2>
-            <div class="welcome-text px-3 py-4" id="welcome-text">Queridos amigos e familiares<br />
+            <div class="welcome-text px-3 py-4" id="welcome-text">Queridos amigos e familiares, sejam bem-vindos!<br />
                 <br />
-                Esse site é uma área criada com muito amor para compartilhar com todos vocês os preparativos da minha tão aguardada Festa de 15 Anos!
+                Este espaço foi criado com muito carinho para compartilhar com vocês cada detalhe dos preparativos da minha tão sonhada <strong> Festa de 15 Anos! </strong>
                 <br />
+                Aqui vocês também encontrarão minha <strong>Lista de Presentes</strong>, que agora são presentes virtuais! Escolham os que mais gostarem e, ao marcar sua escolha, garantirão que ninguém repita o mesmo presente. 
                 <br />
-                Neste site também é possível ver minha lista de presentes. Ao clicar no link “Lista de Presentes“ (ou rolar esta página para baixo) para escolher o presente que deseja me contemplar e será redirecionado para a página da loja!<br />
-                <br />
-                Não se esqueçam de marcar o presente comprado e de confimar sua presença no evento!</div>
+                Ah, e não esqueçam de confirmar presença! Mal posso esperar para celebrar esse momento especial com cada um de vocês!
+            </div>
         </section>       
-      
-        <section class="countdown-section text-center py-4">
-          <h2 class="display-4 texto-com-sombra">Contagem regressiva para o grande dia:</h2>
-          <div id="countdown" class="countdown">
-              <div class="countdown-item">
-                  <span class="countdown-value texto-com-sombra" id="days">00</span>
-                  <span class="countdown-label texto-com-sombra">Dias</span>
-              </div>
-              <div class="countdown-item">
-                  <span class="countdown-value texto-com-sombra" id="hours">00</span>
-                  <span class="countdown-label texto-com-sombra">Horas</span>
-              </div>
-              <div class="countdown-item">
-                  <span class="countdown-value texto-com-sombra" id="minutes">00</span>
-                  <span class="countdown-label texto-com-sombra">Minutos</span>
-              </div>
-              <div class="countdown-item">
-                  <span class="countdown-value texto-com-sombra" id="seconds">00</span>
-                  <span class="countdown-label texto-com-sombra">Segundos</span>
-              </div>
-          </div>
+        
+        <!-- ############ Contagem regressiva ############ -->
+        <section class="countdown-section text-center mb-5">
+            <h2 class="display-4 texto-com-sombra">Contagem regressiva para o grande dia:</h2>
+            <div id="countdown" class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value texto-com-sombra" id="days">00</span>
+                    <span class="countdown-label texto-com-sombra">Dias</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value texto-com-sombra" id="hours">00</span>
+                    <span class="countdown-label texto-com-sombra">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value texto-com-sombra" id="minutes">00</span>
+                    <span class="countdown-label texto-com-sombra">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value texto-com-sombra" id="seconds">00</span>
+                    <span class="countdown-label texto-com-sombra">Segundos</span>
+                </div>
+            </div>
         </section>     
     
         <!-- ############ Confirmação de presença ############ -->
-        <section id="confirmar-presenca" class="confirmation-section container mt-5 p-4 border rounded shadow-sm">
+        <section id="confirmar-presenca" class="confirmation-section container py-4 border rounded shadow-sm">
             <h2 class="text-center mb-4">Confirme sua Presença</h2>
 
             <div class="nome-convidado row mb-3 align-items-center">
-              <div class="col-md-8">
-                <label for="name" class="form-label">Digite seu nome:</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Exemplo: João Silva">
-              </div>
-              <div class="col-md-4 text-md-end text-center mt-3 mt-md-0 botao-busca">
-                <button class="btn btn-primary w-100" onclick="searchName()">Buscar</button>
-              </div>
+                <div class="col-md-8">
+                    <label for="name" class="form-label">Digite seu nome:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Exemplo: João Silva">
+                </div>
+                <div class="col-md-4 text-md-end text-center mt-3 mt-md-0 botao-busca">
+                    <button class="btn btn-primary w-100" onclick="searchName()">Buscar</button>
+                </div>
             </div>
           
             <form id="update-form" style="display: none;">
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <p><strong>Nome:</strong> <span id="name-display"></span></p>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p><strong>Nome:</strong> <span id="name-display"></span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Tipo:</strong> <span id="type-display"></span></p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                  <p><strong>Tipo:</strong> <span id="type-display"></span></p>
+          
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Exemplo: email@dominio.com">
                 </div>
-              </div>
           
-              <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Exemplo: email@dominio.com">
-              </div>
+                <div class="mb-3">
+                    <label for="presence" class="form-label">Presença:</label>
+                    <select id="presence" name="presence" class="form-select">
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
           
-              <div class="mb-3">
-                <label for="presence" class="form-label">Presença:</label>
-                <select id="presence" name="presence" class="form-select">
-                  <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-                </select>
-              </div>
+                <div class="mb-3">
+                    <label for="restrictions"  class="form-label">Restrições Alimentares:</label>
+                    <textarea id="restrictions" name="restrictions"  class="form-control" rows="3" placeholder="Exemplo: Sem glúten, sem lactose"></textarea>
+                </div>
           
-              <div class="mb-3">
-                <label for="restrictions"  class="form-label">Restrições Alimentares:</label>
-                <textarea id="restrictions" name="restrictions"  class="form-control" rows="3" placeholder="Exemplo: Sem glúten, sem lactose"></textarea>
-              </div>
+                <div class="mb-3">
+                    <label for="observations" class="form-label">Observações:</label>
+                    <textarea id="observations" name="observations" class="form-control" rows="3" placeholder="Informações adicionais"></textarea>
+                </div>
           
-              <div class="mb-3">
-                <label for="observations" class="form-label">Observações:</label>
-                <textarea id="observations" name="observations" class="form-control" rows="3" placeholder="Informações adicionais"></textarea>
-              </div>
-          
-              <div class="text-center">
-                <button type="button" class="btn btn-success botao-atualizar" onclick="updateData()">Atualizar</button>
-                <button type="button" class="btn btn-danger botao-cancelar" onclick="cancelForm()">Cancelar</button>
-              </div>
-              
-              
-              
+                <div class="text-center">
+                    <button type="button" class="btn btn-success botao-atualizar" onclick="updateData()">Atualizar</button>
+                    <button type="button" class="btn btn-danger botao-cancelar" onclick="cancelForm()">Cancelar</button>
+                </div>
+                          
             </form>
             
             <p id="status"  class="mt-3 text-center fw-bold"></p>
             
             <div class="text-center" id="ok-button-container" style="display: none;">
                 <button class="btn btn-success botao-ok" onclick="closeForm()">OK</button>
-              </div>
+            </div>
         </section>
                   
-    
-        <section id="lista-presentes" class="lista-presentes mt-5">
+        <!-- ############ Lista de Presentes ############ -->
+        <section id="lista-presentes" class="lista-presentes py-4">
             <h2 class="text-center mb-4 texto-com-sombra">Lista de Presentes</h2>
             <p class="text-center mb-4 texto-com-sombra">
-              Confira a lista de presentes para a Agatha e escolha o que mais gostar.<br>
-              Visite os sites e escolha com o que gostaria de presenteá-la.<br>
-              Só não esqueça de marcar que comprou para que não haja presentes repetidos, OK?
+                <strong>Escolha um presente virtual para a Agatha!</strong>
+                <br> 
+                Dê uma olhada na lista e selecione o que mais gostar. Sua escolha será um gesto de carinho e alegria para esse momento tão especial. 
+                <br> 
+                <strong>Marque que escolheu o presente para evitar repetições, combinado?</strong>
             </p>            
-            <!-- Present List Start -->
+
+            <!-- ############ Present List Start ############ -->
             <div class="container-fluid pt-5">
-                <div class="row px-xl-5">
+                <div class="row px-xl-5" id="present-list">
                     <!-- Item 1 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-03-box">
-                      <div class="present-item d-block text-center border">
-                            <a href="https://shopee.com.br/uniforme-cosplay-kimetsu-demon-slayer-roupa-preta-i.405529182.22397762233?sp_atk=355df0c5-9896-4b98-89ee-85462d8960b1&xptdk=355df0c5-9896-4b98-89ee-85462d8960b1" class="d-block text-decoration-none">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
                                 <div class="present-img position-relative overflow-hidden mb-2">
-                                    <img class="img-fluid" src="/images/presentes/03_uniforme_cacadores_oni.png" alt="Product 1">
+                                    <img class="img-fluid" src="/images/presentes/comer_mochi.png" alt="Product 1">
                                 </div>
-                                <h6 class="font-weight-semi-bold m-0">Uniforme cosplay kimetsu demon slayer roupa preta (calça blusa longa, tamanho M adulto)</h6>
+                                <h6 class="font-weight-semi-bold m-0">Comer mochi</h6>
                             </a>
                             <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
-                                <h6 class="font-weight-semi-bold preco">R$ 98,00</h6>
+                                <h6 class="font-weight-semi-bold preco">R$ 56,00</h6>
                                 <div class="checkbox-container">
                                     <input type="checkbox" id="gift-line-03" name="gift-line-03" onchange="openModal('gift-line-03')">
                                     <label for="gift-line-03" class="ml-2">Selecionar</label>
@@ -209,138 +228,1169 @@
                         </div>
                     </div>
              
-                  <!-- Item 2 -->
-                  <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box">
-                    <div class="present-item d-block text-center border">
-                        <a href="https://shopee.com.br/1-Conjunto-Haikyuu-!-Hinata-kageyama-Karasuno-Camisa-Uniforme-De-V%C3%B4lei-Jersey-Cosplay-Costume-Top-Pants-Vestu%C3%A1rio-Esportivo-i.539644212.28354252245?sp_atk=77d62f76-9668-4833-be6b-ef9c1689e71e&xptdk=77d62f76-9668-4833-be6b-ef9c1689e71e" class="d-block text-decoration-none">
-                            <div class="present-img position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="/images/presentes//04_uniforme_haikyu.png" alt="Product 1">
-                            </div>
-                            <h6 class="font-weight-semi-bold m-0">1 Conjunto Haikyuu ! Hinata kageyama Karasuno Camisa Uniforme De Vôlei Jersey Cosplay Costume Vestuário Esportivo (Tamanho M, nº 4)</h6>
-                        </a>
-                        <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
-                            <h6 class="font-weight-semi-bold preco">R$ 88,98</h6>
-                            <div class="checkbox-container">
-                                <input type="checkbox" id="gift-line-04" name="gift-line-04" onchange="openModal('gift-line-04')">
-                                <label for="gift-line-04" class="ml-2">Selecionar</label>
+                    <!-- Item 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-04-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/cafe_com_gatos.png" alt="Product 2">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Café com gatos</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-04" name="gift-line-04" onchange="openModal('gift-line-04')">
+                                    <label for="gift-line-04" class="ml-2">Selecionar</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                    <!-- <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box">
-                        <a href="https://example.com/product1" class="present-item d-block text-center border">
-                            <div class="present-img position-relative overflow-hidden mb-2">
-                                <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
+                    
+                    <!-- Item 3 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-05-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/video_game_sangrento.png" alt="Product 3">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Vídeo game sangrento</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-05" name="gift-line-05" onchange="openModal('gift-line-05')">
+                                    <label for="gift-line-05" class="ml-2">Selecionar</label>
+                                </div>
                             </div>
-                            <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                            <h6 class="font-weight-semi-bold m-0">Cota 01/50</h6>
-                        </a>
-                        <div >
-                          <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
-                          <input type="checkbox" id="gift1" name="gift1">
-                          <label for="gift1">Selecionar</label>
                         </div>
-                    </div> -->
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 02/50</h6>
-                          <h6 class="font-weight-semi-bold m-0 preco">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 03/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 04/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 05/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 06/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 07/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 08/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>                      
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 09/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3">
-                      <a href="https://example.com/product1" class="present-item d-block text-center border">
-                          <div class="present-img position-relative overflow-hidden mb-2">
-                              <img class="img-fluid" src="/images/playStation5.png" alt="Product 1">
-                          </div>
-                          <h6 class="font-weight-semi-bold m-0">Console Playstation 5 c/ Drive + 2 Controles Brancos + Headset - PS5</h6>
-                          <h6 class="font-weight-semi-bold m-0">Cota 10/50</h6>
-                          <h6 class="font-weight-semi-bold m-0">R$ 100,00</h6>
-                      </a>
-                  </div>
-                    <!-- Adicione mais itens aqui -->
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-06-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/pipoca_com_netflix.png" alt="Product 4">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Pipoca com Netflix</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-06" name="gift-line-06" onchange="openModal('gift-line-06')">
+                                    <label for="gift-line-06" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-07-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/andar_de_patinete_eletrico.png" alt="Product 5">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Andar de patinete elétrico</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-07" name="gift-line-07" onchange="openModal('gift-line-07')">
+                                    <label for="gift-line-07" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-08-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/pular_amarelinha.png" alt="Product 6">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Pular amarelinha</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-08" name="gift-line-08" onchange="openModal('gift-line-08')">
+                                    <label for="gift-line-08" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 7 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-09-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/podcast_true_crime.png" alt="Product 7">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Podcast True Crime</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-09" name="gift-line-09" onchange="openModal('gift-line-09')">
+                                    <label for="gift-line-09" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 8 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-10-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/assisitir_one_piece_sem_interrupcoes.png" alt="Product 8">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Assistir One Piece sem interrupções</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 60,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-10" name="gift-line-10" onchange="openModal('gift-line-10')">
+                                    <label for="gift-line-10" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 9 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-11-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/andar_de_banana_boat.png" alt="Product 9">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Andar de banana boat</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 70,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-11" name="gift-line-11" onchange="openModal('gift-line-11')">
+                                    <label for="gift-line-11" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 10 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-12-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/desvendar_misterio_em _um_scape_room.png" alt="Product 10">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Desvendar um mistério em um Scape Room</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 70,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-12" name="gift-line-12" onchange="openModal('gift-line-12')">
+                                    <label for="gift-line-12" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 11 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-13-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_cavalo.png" alt="Product 11">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de cavalo</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 80,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-13" name="gift-line-13" onchange="openModal('gift-line-13')">
+                                    <label for="gift-line-13" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 12 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-14-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/ler_um_bom_livro_em_uma_rede.png" alt="Product 12">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Ler um bom livro numa rede</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 80,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-14" name="gift-line-14" onchange="openModal('gift-line-14')">
+                                    <label for="gift-line-14" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 13 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-15-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/acabar_com_a_raca_do_vecna.png" alt="Product 13">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Acabar com a raça do Vecna</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 80,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-15" name="gift-line-15" onchange="openModal('gift-line-15')">
+                                    <label for="gift-line-15" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 14 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-16-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/cineminha_sessao_de_terror.png" alt="Product 14">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Cineminha sessão terror</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-16" name="gift-line-16" onchange="openModal('gift-line-16')">
+                                    <label for="gift-line-16" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 15 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-17-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/cineminha_sessao_anime.png" alt="Product 15">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Cineminha sessão anime</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-17" name="gift-line-17" onchange="openModal('gift-line-17')">
+                                    <label for="gift-line-17" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 16 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-18-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/sorvete_no_parque_de_diversoes.png" alt="Product 16">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Sorvete no parque de diversões</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-18" name="gift-line-18" onchange="openModal('gift-line-18')">
+                                    <label for="gift-line-18" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 17 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-19-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/trilha_aventureira.png" alt="Product 17">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Trilha aventureira</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-19" name="gift-line-19" onchange="openModal('gift-line-19')">
+                                    <label for="gift-line-19" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 18 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-20-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/noite_de_jogos.png" alt="Product 18">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Noite de jogos</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-20" name="gift-line-20" onchange="openModal('gift-line-20')">
+                                    <label for="gift-line-20" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 19 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-21-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/um_autografo_do_felix.png" alt="Product 19">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Um autógrafo do Felix</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-21" name="gift-line-21" onchange="openModal('gift-line-21')">
+                                    <label for="gift-line-21" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 20 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-22-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/conhecer_o_tokitou.png" alt="Product 20">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Conhecer o Tokitou</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-22" name="gift-line-22" onchange="openModal('gift-line-22')">
+                                    <label for="gift-line-22" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 21 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-23-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/tarde_a_beira_da_piscina.png" alt="Product 21">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Tarde a beira da piscina</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-23" name="gift-line-23" onchange="openModal('gift-line-23')">
+                                    <label for="gift-line-23" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 22 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-24-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_camelo.png" alt="Product 22">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de camelo</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-24" name="gift-line-24" onchange="openModal('gift-line-24')">
+                                    <label for="gift-line-24" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 23 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-25-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/pular_carnaval.png" alt="Product 23">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Pular carnaval</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-25" name="gift-line-25" onchange="openModal('gift-line-25')">
+                                    <label for="gift-line-25" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 24 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-26-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/compor_uma_musica.png" alt="Product 24">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Compor uma música</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-26" name="gift-line-26" onchange="openModal('gift-line-26')">
+                                    <label for="gift-line-26" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 25 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-27-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encontrar_a_luiza_que_foi_pro_canada.png" alt="Product 25">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encontrar a Luiza que foi pro Canadá</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-27" name="gift-line-27" onchange="openModal('gift-line-27')">
+                                    <label for="gift-line-27" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 26 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-28-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/me_associar_na_akatsuki.png" alt="Product 26">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Me associar a Akatsuki</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 100,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-28" name="gift-line-28" onchange="openModal('gift-line-28')">
+                                    <label for="gift-line-28" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 27 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-29-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/desenhar_com_mauricio_de_souza.png" alt="Product 27">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Desenhar com Maurício de Souza</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 105,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-29" name="gift-line-29" onchange="openModal('gift-line-29')">
+                                    <label for="gift-line-29" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 28 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-30-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/escolhendo_acessorios.png" alt="Product 28">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Escolhendo acessórios</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 120,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-30" name="gift-line-30" onchange="openModal('gift-line-30')">
+                                    <label for="gift-line-30" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 29 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-31-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/travessia_de_tirolesa.png" alt="Product 29">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Travessia de tirolesa</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 120,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-31" name="gift-line-31" onchange="openModal('gift-line-31')">
+                                    <label for="gift-line-31" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 30 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-32-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encher_o_buchin_de_sushi.png" alt="Product 30">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encher o "buchin" de sushi</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 120,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-32" name="gift-line-32" onchange="openModal('gift-line-32')">
+                                    <label for="gift-line-32" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 31 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-33-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encontro_na_bgs.png" alt="Product 31">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encontro na BGS</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 125,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-33" name="gift-line-33" onchange="openModal('gift-line-33')">
+                                    <label for="gift-line-33" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 32 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-34-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/piquenique_com_sessao_de_fotos.png" alt="Product 32">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Piquenique com sessão de fotos</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 126,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-34" name="gift-line-34" onchange="openModal('gift-line-34')">
+                                    <label for="gift-line-34" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 33 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-35-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/entrada_principal_no_anime_extreme.png" alt="Product 33">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Entrada VIP no Anime Extreme</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 129,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-35" name="gift-line-35" onchange="openModal('gift-line-35')">
+                                    <label for="gift-line-35" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 34 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-36-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/dar_risadas_com_thiago_ventura.png" alt="Product 34">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Dar risadas com Thiago Ventura</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 129,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-36" name="gift-line-36" onchange="openModal('gift-line-36')">
+                                    <label for="gift-line-36" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 35 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-37-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_no_shopping_com_as_amigas.png" alt="Product 35">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio no shopping com as amigas</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 150,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-37" name="gift-line-37" onchange="openModal('gift-line-37')">
+                                    <label for="gift-line-37" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 36 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-38-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/final_de_semana_na_praia.png" alt="Product 36">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Final de semana na praia</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 132,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-38" name="gift-line-38" onchange="openModal('gift-line-38')">
+                                    <label for="gift-line-38" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 37 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-39-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_balao.png" alt="Product 37">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de balão</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 150,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-39" name="gift-line-39" onchange="openModal('gift-line-39')">
+                                    <label for="gift-line-39" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 38 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-40-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/um_dia_no_spa.png" alt="Product 38">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Um dia no SPA</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 150,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-40" name="gift-line-40" onchange="openModal('gift-line-40')">
+                                    <label for="gift-line-40" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 39 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-41-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/festinha_no_jardim.png" alt="Product 39">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Festinha no jardim</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 129,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-41" name="gift-line-41" onchange="openModal('gift-line-41')">
+                                    <label for="gift-line-41" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 40 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-42-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_elefante.png" alt="Product 40">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de elefante</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 136,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-42" name="gift-line-42" onchange="openModal('gift-line-42')">
+                                    <label for="gift-line-42" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 41 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-43-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/fan_meeting_com_stray_kids.png" alt="Product 41">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Fan meeting com Stray Kids</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 139,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-43" name="gift-line-43" onchange="openModal('gift-line-43')">
+                                    <label for="gift-line-43" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 42 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-44-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encontro_romantico.png" alt="Product 42">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encontro romântico</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 150,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-44" name="gift-line-44" onchange="openModal('gift-line-44')">
+                                    <label for="gift-line-44" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 43 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-45-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/visitar_a_aniplex_studio.png" alt="Product 43">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Visitar a Aniplex Studio</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 141,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-45" name="gift-line-45" onchange="openModal('gift-line-45')">
+                                    <label for="gift-line-45" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 44 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-46-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_elicoptero.png" alt="Product 44">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de helicóptero</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 144,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-46" name="gift-line-46" onchange="openModal('gift-line-46')">
+                                    <label for="gift-line-46" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 45 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-47-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/pilotar_um_iate.png" alt="Product 45">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Pilotar um iate</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 145,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-47" name="gift-line-47" onchange="openModal('gift-line-47')">
+                                    <label for="gift-line-47" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 46 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-48-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/andar_de_lamborghini.png" alt="Product 46">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Andar de lamboghini</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 148,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-48" name="gift-line-48" onchange="openModal('gift-line-48')">
+                                    <label for="gift-line-48" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 47 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-49-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encontrar_o_pote_ouro_no_final_do_arco-iris.png" alt="Product 47">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encontrar o pote de ouro no final do arco-íris</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 149,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-49" name="gift-line-49" onchange="openModal('gift-line-49')">
+                                    <label for="gift-line-49" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 48 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-50-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/adotar_tres_gatos.png" alt="Product 48">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Adotar três gatos</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 152,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-50" name="gift-line-50" onchange="openModal('gift-line-50')">
+                                    <label for="gift-line-50" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 49 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-51-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/cantar_em_um_palco.png" alt="Product 49">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Cantar em um palco</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 156,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-51" name="gift-line-51" onchange="openModal('gift-line-51')">
+                                    <label for="gift-line-51" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 50 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-52-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/noite_de_karaoke.png" alt="Product 50">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Noite de karaokê</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 159,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-52" name="gift-line-52" onchange="openModal('gift-line-52')">
+                                    <label for="gift-line-52" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 51 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-53-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/dancar_ate_me_acabar_no_just_dance.png" alt="Product 51">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Dançar até me acabar no Just Dance</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 162,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-53" name="gift-line-53" onchange="openModal('gift-line-53')">
+                                    <label for="gift-line-53" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 52 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-54-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/o_lapis_de_cor_ideal.png" alt="Product 52">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">O lápis de cor ideal</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 190,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-54" name="gift-line-54" onchange="openModal('gift-line-54')">
+                                    <label for="gift-line-54" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 53 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-55-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/show_da_ariana_grande.png" alt="Product 53">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Show da Ariana Grande</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 194,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-55" name="gift-line-55" onchange="openModal('gift-line-55')">
+                                    <label for="gift-line-55" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 54 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-56-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/jantar_a_luz_de_velas.png" alt="Product 54">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Jantar a luz de velas</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 189,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-56" name="gift-line-56" onchange="openModal('gift-line-56')">
+                                    <label for="gift-line-56" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 55 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-57-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/praticar_snowoard.png" alt="Product 55">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Praticar snowboard</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 199,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-57" name="gift-line-57" onchange="openModal('gift-line-57')">
+                                    <label for="gift-line-57" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 56 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-58-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/passeio_de_maria_fumaça.png" alt="Product 56">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Passeio de Maria Fumaça</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 217,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-58" name="gift-line-58" onchange="openModal('gift-line-58')">
+                                    <label for="gift-line-58" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 57 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-59-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/meu_vestido_dos_sonhos.png" alt="Product 57">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Meu vestido dos sonhos</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 249,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-59" name="gift-line-59" onchange="openModal('gift-line-59')">
+                                    <label for="gift-line-59" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 58 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-60-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/aprimorar_meus_conhecimentos_de_teclado.png" alt="Product 58">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Aprimorar meus conhecimentos de teclado</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 254,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-60" name="gift-line-60" onchange="openModal('gift-line-60')">
+                                    <label for="gift-line-60" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 59 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-61-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/curso_de_sushi.png" alt="Product 59">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Curso de sushi</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 289,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-61" name="gift-line-61" onchange="openModal('gift-line-61')">
+                                    <label for="gift-line-61" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 60 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-62-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/encontro_com_hyunjin.png" alt="Product 60">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Encontro com Hyunjin</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 295,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-62" name="gift-line-62" onchange="openModal('gift-line-62')">
+                                    <label for="gift-line-62" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 61 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-63-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/fazer_bungee_jumping.png" alt="Product 61">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Fazer bungee jump</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 446,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-63" name="gift-line-63" onchange="openModal('gift-line-63')">
+                                    <label for="gift-line-63" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 62 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 pb-3 present-box" id="gift-line-64-box">
+                        <div class="present-item d-block text-center border">
+                            <a class="d-block text-decoration-none">
+                                <div class="present-img position-relative overflow-hidden mb-2">
+                                    <img class="img-fluid" src="/images/presentes/vila_dos_ferreiros_universal_studios_japan.png" alt="Product 62">
+                                </div>
+                                <h6 class="font-weight-semi-bold m-0">Visitar a Vila dos Ferreiros na Universal Studios Japan</h6>
+                            </a>
+                            <div class="present-footer mt-2 d-flex justify-content-between align-items-center">
+                                <h6 class="font-weight-semi-bold preco">R$ 525,00</h6>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="gift-line-64" name="gift-line-64" onchange="openModal('gift-line-64')">
+                                    <label for="gift-line-64" class="ml-2">Selecionar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                        <button id="loadMoreBtn" class="btn btn-primary">Mostrar mais</button>
+                    </div>
+
                 </div>
             </div>
             <!-- Present List End -->
@@ -371,21 +1421,97 @@
             </div>
         </section>
     
-        <!-- <section id="fotos" class="mt-5">
-            <h2>Fotos do Evento</h2>
-            <p>Veja as fotos da festa e compartilhe suas lembranças conosco!</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="foto1.jpg" alt="Foto 1" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="foto2.jpg" alt="Foto 2" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="foto3.jpg" alt="Foto 3" class="img-fluid">
+        <!-- ############ Festa Section ############ -->
+        <section id="festa" class="festa-section  text-center">
+            <div class="container">
+                <h2 class="display-4 texto-com-sombra">Informações da Festa</h2>
+                <p class="lead texto-com-sombra">O grande dia está chegando! Aqui estão os detalhes para você se preparar!</p>
+
+                <div class="row mt-4">
+                    <!-- Data -->
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="info-box">
+                            <i class="fas fa-calendar-alt fa-3x"></i>
+                            <h4 class="mt-2">Data</h4>
+                            <p class="info-text">📅 <strong>03 de Maio de 2025</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Horário -->
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="info-box">
+                            <i class="fas fa-clock fa-3x"></i>
+                            <h4 class="mt-3">Horário</h4>
+                            <p class="info-text">🕗 <strong>19h30</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Dress Code -->
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="info-box">
+                            <i class="fas fa-tshirt fa-3x"></i>
+                            <h4 class="mt-3">Dress Code</h4>
+                            <p class="info-text">✨ <strong>Esporte fino</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Localização -->
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="info-box">
+                            <i class="fas fa-map-marker-alt fa-3x"></i>
+                            <h4 class="mt-3">Local</h4>
+                            <p class="info-text">📍 <strong>Dresh Espaço de Festas e Eventos</strong></p>
+                            <a href="https://www.google.com.br/maps/place/Dresch+Espa%C3%A7o+de+Festas+e+Eventos/@-29.69968,-51.2349043,18.04z/data=!4m6!3m5!1s0x95195c71cdc87395:0x7daaf53f3e0c55e6!8m2!3d-29.6994994!4d-51.2347765!16s%2Fg%2F11dxl9dd0r?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary mt-2">
+                                Ver no Google Maps
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>         -->
+        </section>
+        
+        
+        <section id="fotos" class="mt-5">
+            <h2 class="text-center display-4 texto-com-sombra">Fotos do Evento</h2>
+            <p class="text-center fotos-section texto-com-sombra">Veja as fotos da festa e compartilhe suas lembranças conosco!</p>
+        
+            <div class="container">
+                <div class="row g-2 fotos-container">
+                    <!-- Grid de fotos -->
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="0"><img src="/images/fotos/no_image.jpg" alt="Foto 1" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="1"><img src="/images/fotos/no_image.jpg" alt="Foto 2" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="2"><img src="/images/fotos/no_image.jpg" alt="Foto 3" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="3"><img src="/images/fotos/no_image.jpg" alt="Foto 4" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="4"><img src="/images/fotos/no_image.jpg" alt="Foto 5" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="5"><img src="/images/fotos/no_image.jpg" alt="Foto 6" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="6"><img src="/images/fotos/no_image.jpg" alt="Foto 7" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="7"><img src="/images/fotos/no_image.jpg" alt="Foto 8" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="8"><img src="/images/fotos/no_image.jpg" alt="Foto 9" class="img-fluid foto-item"></div>
+                    <div class="col-1 col-sm-2 col-md-3 col-lg-1" data-index="9"><img src="/images/fotos/no_image.jpg" alt="Foto 10" class="img-fluid foto-item"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal do Carrossel -->
+        <div id="fotoModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        <div id="carouselFotos" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner"></div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
     </main>
     
 
