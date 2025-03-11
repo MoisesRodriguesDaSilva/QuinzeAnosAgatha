@@ -9,7 +9,7 @@ body {
     font-family: 'Gabriola', serif;
     margin: 0;
     padding: 0;
-    padding-top: 4.375rem; /* Compensa o espaço ocupado pelo header fixo */
+    padding-top: 4.375em; /* Compensa o espaço ocupado pelo header fixo */
     background-image: url(/images/fundo.jpeg);
     background-size: cover;
     background-position: center;
@@ -29,6 +29,7 @@ h1, h2, h3 {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     z-index: -1;
 }
@@ -45,13 +46,14 @@ h1, h2, h3 {
 
 .custom-header {
     background-color: rgba(219, 186, 243, 0.9);
-    padding: 0 1rem;
+    padding: 0 1em;
     width: 100%;
+    max-width: 100%;
     z-index: 1030; /* Garante que está acima do conteúdo */
     position: fixed; /* Faz o header fixo no topo */
     top: 0;
     left: 0;
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Sombra opcional */
   }
 
 .navbar {
@@ -64,14 +66,14 @@ h1, h2, h3 {
 .navbar-nav {
     display: flex;
     justify-content: center; /* Centraliza os itens no nav */
-    gap: 1rem; /* Espaçamento entre os itens */
+    gap: 1em; /* Espaçamento entre os itens */
 }
 
 .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     color: #000;
     font-family: 'Gabriola';
-    font-size: 2rem;
+    font-size: 2em;
     position: relative;
     display: inline-block;
 }
@@ -80,11 +82,11 @@ h1, h2, h3 {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0.5rem;  /* Ajuste para o sublinhado não sobrepor o texto */
+    bottom: 0.5em;  /* Ajuste para o sublinhado não sobrepor o texto */
     width: 0%;      /* Inicialmente sem largura */
-    height: 0.125rem;
+    height: 0.125em;
     background-color: #000;
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
     transition: width 0.25s ease; /* Animação de crescimento do sublinhado */
 }
 
@@ -114,33 +116,33 @@ h1, h2, h3 {
 
 .hero-section {
     text-align: center; /* Centraliza todo o conteúdo */
-    padding: 2rem; /* Espaçamento interno */
+    padding: 2em; /* Espaçamento interno */
 }
 
 /* Estilo para os títulos */
 .hero-section h1 {    
-    font-size: 5rem;
+    font-size: 5em;
     color: #000;
-    padding: 0.15rem; 
+    padding: 0.15em; 
 }
 
 /* Estilo para a imagem */
 .hero-section img {
-    max-height: 70vh; /* Limita a altura da imagem a 70% da altura da tela */
+    max-height: 100%; /* Limita a altura da imagem a 70% da altura da tela */
     width: auto; /* Preserva a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem seja completamente visível */
+    object-fit: cover; /* Garante que a imagem seja completamente visível */
 }
 
 .display-3 {
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 3em;
+    padding: 1em;
 }
 
 .welcome-text {
     font-family: 'Gabriola';
-    font-size: 2rem;
+    font-size: 2em;
     background-color: rgba(219, 186, 243, 0.9);
-    padding: 1rem 2rem;
+    padding: 1em 2em;
 }
 
 
@@ -148,21 +150,21 @@ h1, h2, h3 {
 .countdown-section {
     font-family: 'Gabriola', serif;
     background-color: transparent;
-    padding: 1.25rem;
+    padding: 1.25em;
     text-align: center;
 }
 
 /* Título */
 .display-4 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3em;
+    margin-bottom: 1em;
 }
 
 /* Layout do contador */
 .countdown {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap; /* Impede que os elementos quebrem para a próxima linha */
+    flex-wrap: nowrap; /* Impede que os elementos quebem para a próxima linha */
     overflow: hidden; /* Evita quebra de layout */
 }
 
@@ -170,37 +172,49 @@ h1, h2, h3 {
 .countdown-item {
     text-align: center;
     flex: 1 1 auto; /* Permite que os itens diminuam de tamanho conforme necessário */
-    max-width: 12rem; /* Limita o tamanho máximo */
-    min-width: 4rem; /* Tamanho mínimo para manter a legibilidade */
+    max-width: 12em; /* Limita o tamanho máximo */
+    min-width: 4em; /* Tamanho mínimo para manter a legibilidade */
 }
 
 /* Números */
 .countdown-value {
     display: block;
-    font-size: 5rem;
+    font-size: 5em;
 }
 
 /* Rótulos */
 .countdown-label {
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 .confirmation-section {
     background-color: rgba(219, 186, 243, 0.9);
-    font-size: 2rem;
+    font-size: 1.5em;
 }
 
 .confirmation-section h2 {
     color: #343a40; /* Título mais escuro */
-    font-size: 3rem;
+    font-size: 2em;
+}
+
+.div-botao-buscar {
+    padding-top: 3.5em;
+}
+
+.busca-nome {
+    padding-top: 1em;
 }
 
 .form-control{
-    font-size: 2rem !important;
+    font-size: 1.5em ;
+}
+
+.form-label {
+    font-size: 1.5em;
 }
 
 .form-select {
-    font-size: 2rem !important;  
+    font-size: 1.5em ;  
 }
 
 #status {
@@ -211,43 +225,43 @@ h1, h2, h3 {
     color: #dc3545; /* Vermelho para erro */
 }
 
-button {
-    font-size: 2rem !important;
+.botao-busca-convidado {
+    font-size: 1.5em;
 }
 
 .botao-busca {
-    padding-top: 3.5rem;
+    padding-top: 3.5em;
 }
 
 .botao-atualizar {
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;}
+    max-width: 13em;
+    margin: 0.5em 0;}
 
 .botao-cancelar {
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;
+    max-width: 13em;
+    margin: 0.5em 0;
 }
 
 .botao-ok {
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;
+    max-width: 13em;
+    margin: 0.5em 0;
 }
 
 
 /* Estio lista de presentes*/
 .lista-presentes h2{
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 .lista-presentes p{
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .present-box {
-    padding: 0.5rem;
+    padding: 0.5em;
 }
 
 /* Estilo base do item */
@@ -256,8 +270,8 @@ button {
     border-radius: 8px;
     background-color: rgba(219, 186, 243, 0.9);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-    height: 23rem; /* Define uma altura mínima */
+    padding: 0.5em;
+    height: 23em; /* Define uma altura mínima */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,7 +279,7 @@ button {
 }
 
 .present-item h6 {
-    font-size: 1rem;
+    font-size: 1em;
     text-decoration: none;
     color: black;
 }
@@ -284,7 +298,7 @@ button {
 
 /* Preço destacado */
 .preco {
-    font-size: 1.5rem !important;
+    font-size: 1.5em !important;
     color: red !important;
     font-weight: bold;
     text-align: start;
@@ -311,7 +325,7 @@ button {
 
 .present-img img {
     max-width: 100%; /* Garante que a imagem não ultrapasse o limite da div */
-    height: 14rem; /* Mantém a proporção */
+    height: 14em; /* Mantém a proporção */
     object-fit: contain; /* Ajusta a imagem dentro do espaço */  
 }
 
@@ -321,8 +335,8 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem 0;
-    padding: 0.2rem;
+    gap: 0.5em 0;
+    padding: 0.2em;
 }
 
 .present-box input[type="checkbox"] {
@@ -333,14 +347,14 @@ button {
 .present-box label {
     font-size: 14px;
     cursor: pointer; /* Permite clicar no texto do label */
-    padding: 0.2rem;
+    padding: 0.2em;
 }
 
 /* Estilo base do checkbox */
 .checkbox-container input[type="checkbox"] {
-    appearance: none; /* Remove o estilo padrão do navegador */
-    width: 1rem;
-    height: 1rem;
+    appearance: none; /* emove o estilo padrão do navegador */
+    width: 1em;
+    height: 1em;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: white;
@@ -360,7 +374,7 @@ button {
 .checkbox-container input[type="checkbox"]:checked::after {
     content: '✓'; /* Ícone de check */
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -376,14 +390,14 @@ button {
     justify-content: center;
     align-items: center;
     z-index: 1050;
-    height: 100hv;
+    height: 100vh;
     overflow: hidden;
 }
 
 #modalContent {
-    background: white;
-    padding: 1rem;
-    border-radius: 1rem;
+    background: rgba(219, 186, 243, 0.9);
+    padding: 1em;
+    border-radius: 1em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 90%;
@@ -399,39 +413,65 @@ button {
     max-width: 500px; /* Ajuste conforme necessário */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+
 .gift-modal-button {
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;
+    max-width: 8em;
+    margin: 0.5em 0;
+    font-size: 2em;
 }
 
 #nameInputSection {
     font-family: 'Gabriola', serif;
-    font-size: 2rem;
+    font-size: 2em;
+}
+
+.input-name {
+    width: auto;
 }
 
 #thankYouMessage {
     font-family: 'Gabriola', serif;
-    font-size: 2rem;
+    font-size: 2em;
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.gift-second-modal-button {
+    width: 100%;
+    max-width: 8em;
+    margin: 0.5em 0;
+    font-size: 1em;
+}
+
+.modal-p {
+    font-size: 1em !important;
+}
+
 .gift-modal-button-close {
     display: none;
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;
+    max-width: 8em;
+    margin: 0.5em 0;
     align-self: center;
+    font-size: 1em;
 }
 
-#loadMoreBtn {
+
+.botao-mostrar-mais-presentes {
     width: 100%;
-    max-width: 13rem;
-    margin: 0.5rem 0;
+    max-width: 6em;
+    margin: 0.5em 0;
     align-self: center;
+    font-size: 2em;
 }
 
 /* Informações da festa */
@@ -440,19 +480,19 @@ button {
     padding: 60px 0;
 }
 .festa-section p {
-    font-size: 2rem;
+    font-size: 2em;
 }
 .info-box {
     background-color: rgba(219, 186, 243, 0.9);
-    padding: 1rem;
+    padding: 1em;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    height: 14rem;
+    height: 14em;
 }
 
 .info-text {
-    font-size: 1.5rem !important; /* Ou ajuste conforme necessário */
+    font-size: 1.5em !important; /* Ou ajuste conforme necessário */
 }
 
 .info-box:hover {
@@ -463,9 +503,28 @@ button {
 }
 
 /* Grid responsivo com 10 imagens por linha */
+/* Container para o grid de fotos */
+.fotos-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 fotos por linha */
+    gap: 10px; /* Espaçamento entre as fotos */
+    justify-items: stretch; /* As fotos irão ocupar toda a largura da célula */
+    align-items: stretch; /* As fotos irão ocupar toda a altura da célula */
+}
+
+/* Estilo para cada item (foto) */
 .foto-item {
-    cursor: pointer;
-    transition: 0.3s;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem dentro da célula */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+/* As imagens ocupam 100% do espaço da célula */
+.foto-item img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: 100%; /* Garante que a imagem ocupe toda a altura */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 5px; /* Exemplo de borda arredondada */
 }
 
 .foto-item:hover {
@@ -474,7 +533,7 @@ button {
 
 /* Ajusta o tamanho da imagem dentro do carrossel */
 .carousel-item img {
-    max-height: 90vh; /* 90% da altura da tela */
+    max-height: 70vh; /* 90% da altura da tela */
     width: auto; /* Mantém a proporção */
     margin: auto;
 }
@@ -485,43 +544,61 @@ button {
     width: 5%;
 }
 
-.fotos-container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-wrap: wrap; /* Para quebrar linha se houver muitas imagens */
-    gap: 10px; /* Espaçamento entre as imagens */
-    height: 100%; /* Certifique-se de definir uma altura para o alinhamento vertical funcionar */
+
+.modal-content {
+    background: transparent; /* emove o fundo */
+    border: none; /* emove as bordas */
+    box-shadow: none; /* emove sombras */
 }
 
-.py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Garante que o conteúdo ocupe toda a tela */
 }
+
+.carousel-inner img {
+    max-width: 90vw; /* Mantém a imagem responsiva */
+    max-height: 90vh;
+    object-fit: contain; /* Evita cortes */
+}
+
+
+/* Ajuste para telas menores (por exemplo, 5 fotos por linha) */
+@media (max-width: 1200px) {
+    .fotos-container {
+        grid-template-columns: repeat(5, 1fr); /* 5 fotos por linha */
+    }
+}
+   
 
 /* Ajustes para telas pequenas */
 @media (max-width: 576px) {
+    .countdown {
+        justify-content: start;
+    }
     .countdown-item {
-        max-width: 5rem; /* Reduz o tamanho máximo dos itens */
+        max-width: 5em; /* Reduz o tamanho máximo dos itens */
     }
     .countdown-value {
-        font-size: 3rem; /* Diminui o tamanho dos números */
+        font-size: 3em; /* Diminui o tamanho dos números */
     }
     .countdown-label {
-        font-size: 1.5rem; /* Diminui o tamanho dos rótulos */
+        font-size: 1.5em; /* Diminui o tamanho dos rótulos */
     }
     .confirmation-section {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
     .form-control{
-        font-size: 1.5rem !important;
+        font-size: 1.5em !important;
     }
     
     .form-select {
-        font-size: 1.5rem !important;  
+        font-size: 1.5em !important;  
     }
-    button {
-        font-size: 1.5rem !important;
+    .div-botao-buscar {
+        padding-top: 1em;
     }
     .botao-busca {
         padding-top: 0;
@@ -529,10 +606,17 @@ button {
     .botao-atualizar {
         width:100%;    
     }
+    .input-name {
+        width: 8em;
+    }
     .preco {
-        font-size: 1rem !important;
+        font-size: 1em !important;
         color: red !important;
         font-weight: bold;
         text-align: start;
+    }
+
+    .fotos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 fotos por linha */
     }
 }
