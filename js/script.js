@@ -70,53 +70,100 @@ startCountdown(targetDate);
 
 
 // Confirmação de presença
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxPtsIRbYFOfx75Xr_uLdANq6WFRY01e9guVqocN4docPvjSgvv_nr1sRc5LJYYtJkYGw/exec';
-    
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwDaG55QHZx7JrgJDbb1volxtSRQK-BN4bZemJLsJb4lq06jdlVqKP7kGtmmqIZZmbVrQ/exec';
+
 async function searchName() {
     const name = document.getElementById('name').value.trim();
-    
+
     if (!name) {
         alert('Por favor, digite um nome!');
         return;
     }
-  
+
     try {
-    // Fazer requisição GET sem cabeçalhos CORS
         const response = await fetch(`${scriptURL}?name=${encodeURIComponent(name)}`);
         const result = await response.json();
 
-        const statusElement = document.getElementById('status'); // Captura o elemento da mensagem
+        const statusElement = document.getElementById('status');
 
-        if (result.error || !result.name) {
+        if (!result.length) {
             statusElement.textContent = 'Nome não encontrado. Verifique e tente novamente!';
-            document.getElementById('update-form').style.display = 'none'; // Esconde o formulário
+            document.getElementById('update-form').style.display = 'none';
             return;
         }
-  
-        // Preenche os campos do formulário com os dados encontrados
-        document.getElementById('name-display').textContent = result.name;
-        document.getElementById('type-display').textContent = result.type;
-        document.getElementById('email').value = result.email;
-        document.getElementById('presence').value = result.presence;
-        document.getElementById('restrictions').value = result.restrictions; // Nova coluna
-        document.getElementById('observations').value = result.observations;
-  
-        // Armazena o índice da linha no elemento data-row-index
-        document.getElementById('name-display').dataset.rowIndex = result.rowIndex;
-  
-        // Exibe o formulário
-        document.getElementById('update-form').style.display = 'block';
 
-        // Limpa mensagens anteriores
-        statusElement.textContent = '';
+        if (result.length === 1) {
+            fillForm(result[0]);
+        } else {
+            abrirModalNomeRepetido(result); // Chama a modal personalizada
+        }
     } catch (error) {
         document.getElementById('status').textContent = 'Erro ao buscar os dados. Tente novamente mais tarde!';
     }
 }
+
+
+function fillForm(data) {
+    document.getElementById('name-display').textContent = data.name;
+    document.getElementById('type-display').textContent = data.type;
+    document.getElementById('email').value = data.email;
+    document.getElementById('presence').value = data.presence;
+    document.getElementById('restrictions').value = data.restrictions;
+    document.getElementById('observations').value = data.observations;
+
+    document.getElementById('name-display').dataset.rowIndex = data.rowIndex;
+  
+    // Exibir formulário
+    document.getElementById('update-form').style.display = 'block';
+
+    document.querySelector('.botao-atualizar').style.display = 'inline-block';
+    document.querySelector('.botao-cancelar').style.display = 'inline-block';
+    document.getElementById('ok-button-container').style.display = 'none';
+  
+    // Ocultar a lista de nomes após a seleção
+    document.getElementById('nameOptions').innerHTML = '';
+    document.getElementById('status').textContent = '';
+}
+
+async function abrirModalNomeRepetido(nomes) {
+    const modal = document.getElementById('nameModal');
+    const modalContent = document.getElementById('nameModalContent');
+    const nameOptionsContainer = document.getElementById('nameOptions');
+
+    // Limpa a lista antes de adicionar os novos nomes
+    nameOptionsContainer.innerHTML = '';
+
+    // Adiciona os nomes à lista
+    nomes.forEach((entry) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = entry.name;
+        listItem.classList.add('list-group-item', 'list-group-item-action');
+        listItem.style.cursor = 'pointer';
+        listItem.onclick = () => {
+            fillForm(entry);
+            fecharModalNomeRepetido(); // Fecha a modal ao selecionar
+        };
+        nameOptionsContainer.appendChild(listItem);
+    });
+
+    // Exibir a modal
+    modal.style.display = 'flex';
+}
+
+function fecharModalNomeRepetido() {
+    document.getElementById('nameModal').style.display = 'none';
+}
+
   
 async function updateData() {
-    const email = document.getElementById('email').value;
     const presence = document.getElementById('presence').value;
+
+    if (!presence) {
+        alert('Por favor, selecione sua presença.');
+        return;
+    }
+
+    const email = document.getElementById('email').value;
     const restrictions = document.getElementById('restrictions').value;
     const observations = document.getElementById('observations').value;
       
@@ -399,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         fotos.forEach((foto, index) => {
             const isActive = index === currentIndex ? "active" : "";
-            const imgSrc = foto.getAttribute("src");
+            const imgSrc = foto.querySelector("img").getAttribute("src"); // 🔹 Correção aqui
             const carouselItem = `
                 <div class="carousel-item ${isActive}">
                     <img src="${imgSrc}" class="d-block w-100" alt="Foto ${index + 1}">
@@ -408,10 +455,16 @@ document.addEventListener("DOMContentLoaded", function () {
             carouselInner.innerHTML += carouselItem;
         });
 
-        // Ativa o carrossel manualmente
-        const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: false, // Impede que mude automaticamente
-            wrap: true // Permite voltar para a primeira imagem ao chegar na última
+        // 🔹 Remove qualquer instância antiga do carrossel
+        const oldCarousel = bootstrap.Carousel.getInstance(carouselElement);
+        if (oldCarousel) {
+            oldCarousel.dispose();
+        }
+
+        // 🔹 Cria um novo carrossel e exibe o modal
+        new bootstrap.Carousel(carouselElement, {
+            interval: false,
+            wrap: true
         });
 
         modal.show();

@@ -237,20 +237,84 @@ h1, h2, h3 {
 }
 
 .botao-atualizar {
+    font-size: 1.5em;
     width: 100%;
-    max-width: 13em;
+    max-width: 8em;
     margin: 0.5em 0;}
 
 .botao-cancelar {
+    font-size: 1.5em;
     width: 100%;
-    max-width: 13em;
+    max-width: 8em;
     margin: 0.5em 0;
 }
 
 .botao-ok {
+    font-size: 1.5em;
     width: 100%;
-    max-width: 13em;
+    max-width: 8em;
     margin: 0.5em 0;
+}
+
+#nameModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#nameModalContent {
+    background: rgba(219, 186, 243, 0.9);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 700px;
+    position: relative;
+}
+
+#nameModalContent p {
+    font-size: 2em;
+}
+
+#nameOptions {
+    list-style: none;
+    padding: 0;
+}
+
+#nameOptions li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+#nameOptions li:hover {
+    background: rgba(200, 150, 230, 0.8);
+    color: white;
+}
+
+#closeModal {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 8em;
+    margin: 0.5em 0;
+    font-size: 2em;
+}
+
+#closeModal:hover {
+    background: #c9302c;
 }
 
 
@@ -536,7 +600,8 @@ h1, h2, h3 {
 
 /* Ajusta o tamanho da imagem dentro do carrossel */
 .carousel-item img {
-    max-height: 70vh; /* 90% da altura da tela */
+    max-width: 95vw;
+    max-height: 95vh; /* 90% da altura da tela */
     width: auto; /* Mantém a proporção */
     margin: auto;
 }
@@ -559,11 +624,13 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Garante que o conteúdo ocupe toda a tela */
+    text-align: center;
 }
 
 .carousel-inner img {
-    max-width: 90vw; /* Mantém a imagem responsiva */
-    max-height: 90vh;
+    width: auto;
+    max-width: 95vw; /* Mantém a imagem responsiva */
+    max-height: 95vh;
     object-fit: contain; /* Evita cortes */
 }
 

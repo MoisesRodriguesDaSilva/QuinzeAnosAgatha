@@ -194,6 +194,15 @@
                 <button class="btn btn-success botao-ok" onclick="closeForm()">OK</button>
             </div>
         </section>
+
+        <!-- Modal quando a busca por convidados traz nomes iguais-->
+        <div id="nameModal" style="display: none;">
+            <div id="nameModalContent">
+                <p>Foram encontrados vários nomes. Selecione o seu:</p>
+                <ul id="nameOptions"></ul>
+                <button id="closeModal" onclick="fecharModalNomeRepetido()">Cancelar</button>
+            </div>
+        </div>        
                   
         <!-- ############ Lista de Presentes ############ -->
         <section id="lista-presentes" class="lista-presentes py-4">
@@ -1408,7 +1417,7 @@
                     <!-- Campo para nome, oculto inicialmente -->
                     <div id="nameInputSection" style="display: none;">
                         <p class="modal-p">Faça o pix do valor do presente para:</p>
-                        <p class="modal-p">Chace PIX - 51991235333</p>
+                        <p class="modal-p">Chave PIX - 51991235333</p>
                         <label for="giftName">Digite seu nome:</label>
                         <input type="text" id="giftName" class="input-name">
                         <button class="btn btn-primary gift-second-modal-button" onclick="confirmGift()">Confirmar</button>
@@ -1521,6 +1530,7 @@
     <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2024 Festa de 15 anos - Agatha. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Moises Rodrigues</p>
         <div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
     </footer>
 
