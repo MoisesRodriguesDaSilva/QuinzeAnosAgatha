@@ -470,3 +470,16 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.show();
     }
 });
+
+function copyToClipboard() {
+    var copyText = "51991235333";
+    
+    // Usa a Clipboard API para copiar o texto para a área de transferência
+    navigator.clipboard.writeText(copyText).then(function() {
+      // Exibe a mensagem de sucesso na modal
+      var messageElement = document.getElementById("copyMessage");
+      messageElement.style.display = "block";  // Torna a mensagem visível
+    }).catch(function(error) {
+      console.error("Erro ao copiar para a área de transferência: ", error);
+    });
+  }

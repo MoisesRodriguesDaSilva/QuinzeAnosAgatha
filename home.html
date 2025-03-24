@@ -93,6 +93,51 @@
                     <div class="carousel-item">
                         <img src="/images/carousel/foto_carousel_003.jpg" class="img-fluid mt-3" alt="Foto da Agatha 3">
                     </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_004.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_005.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_006.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_007.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_008.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_009.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_010.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 10">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_011.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 11">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_012.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 12">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_013.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 13">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_014.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 14">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_015.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 15">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_016.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 16">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_017.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 17">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel/foto_carousel_018.jpeg" class="img-fluid mt-3" alt="Foto da Agatha 18">
+                    </div>
                 </div>
             </div>
         </section>
@@ -1417,7 +1462,10 @@
                     <!-- Campo para nome, oculto inicialmente -->
                     <div id="nameInputSection" style="display: none;">
                         <p class="modal-p">Faça o pix do valor do presente para:</p>
-                        <p class="modal-p">Chave PIX - 51991235333</p>
+                        <p class="modal-p">
+                            Chave PIX - <span id="pixNumber" onclick="copyToClipboard()">51991235333</span>
+                        </p>
+                        <p id="copyMessage" class="msg-numero-copiado" style="display: none; color: green;">Número copiado para a área de transferência.</p> <!-- Mensagem oculta inicialmente -->
                         <label for="giftName">Digite seu nome:</label>
                         <input type="text" id="giftName" class="input-name">
                         <button class="btn btn-primary gift-second-modal-button" onclick="confirmGift()">Confirmar</button>

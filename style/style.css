@@ -569,6 +569,21 @@ h1, h2, h3 {
     color: #d63384;
 }
 
+#pixNumber {
+    cursor: pointer; /* Muda o cursor para a mão ao passar o mouse */
+    color: #007bff; /* Cor azul (ou qualquer cor que combine com seu tema) */
+    text-decoration: underline; /* Sublinha o texto para indicar que é clicável */
+    font-weight: bold; /* Deixa o texto mais forte */
+  }
+
+  #pixNumber:hover {
+    color: #0056b3; /* Cor quando o mouse passa por cima */
+  }
+
+.msg-numero-copiado {
+    font-size: 1em !important;
+}
+
 /* Grid responsivo com 10 imagens por linha */
 /* Container para o grid de fotos */
 .fotos-container {
