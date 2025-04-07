@@ -384,7 +384,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 const presentBox = checkbox.closest('.present-box');
                 
                 if (presentBox) {
-                    presentBox.style.display = 'none'; // Oculta toda a div do presente
+                    // presentBox.style.display = 'none'; // Oculta toda a div do presente
+                    presentBox.classList.add('disabled'); // Adiciona uma classe para estilizar
+                    checkbox.checked = true; // Marca como já adquirido
+                    const label = presentBox.querySelector('.checkbox-container');
+                    if (label) {
+                        label.innerHTML = '<span>Presente adquirido</span>';
+                    }
                 }
             }
         })
@@ -424,6 +430,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
 
 // Fotos da festa
 
