@@ -241,7 +241,7 @@ function disableSearchButtonAfterDate(date) {
 }
 
 // Exemplo de como chamar a função (data após 01 de Janeiro de 2025)
-disableSearchButtonAfterDate('2025-04-10');
+disableSearchButtonAfterDate('2025-04-10T23:59:59');
 
       
 // Função para abrir a modal com detalhes do presente
@@ -372,6 +372,7 @@ function closeModal() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkboxes = document.querySelectorAll(".checkbox-container input[type='checkbox']");
+    console.log("Total checkboxes encontrados:", checkboxes.length);
     
     checkboxes.forEach((checkbox) => {
         const presentId = checkbox.id; // O ID do checkbox é o mesmo do presentId
