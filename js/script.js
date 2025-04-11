@@ -241,7 +241,7 @@ function disableSearchButtonAfterDate(date) {
 }
 
 // Exemplo de como chamar a função (data após 01 de Janeiro de 2025)
-disableSearchButtonAfterDate('2025-04-10T23:59:59');
+disableSearchButtonAfterDate('2025-04-20T23:59:59');
 
       
 // Função para abrir a modal com detalhes do presente
