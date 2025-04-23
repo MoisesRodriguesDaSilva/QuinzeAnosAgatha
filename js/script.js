@@ -226,22 +226,22 @@ function closeForm() {
     document.querySelector('.botao-busca').style.display = 'block';
 }
 
-function disableSearchButtonAfterDate(date) {
-    const searchButton = document.querySelector('.botao-busca button');
-    const currentDate = new Date();
+// function disableSearchButtonAfterDate(date) {
+//     const searchButton = document.querySelector('.botao-busca button');
+//     const currentDate = new Date();
 
-    // Converter a data fornecida para o formato Date
-    const specifiedDate = new Date(date);
+//     // Converter a data fornecida para o formato Date
+//     const specifiedDate = new Date(date);
 
-    if (currentDate > specifiedDate) {
-        searchButton.disabled = true;
-        searchButton.style.backgroundColor = '#ccc'; // Opcional: estilo para mostrar que está desabilitado
-        searchButton.style.cursor = 'not-allowed'; // Para evitar que o usuário clique
-    }
-}
+//     if (currentDate > specifiedDate) {
+//         searchButton.disabled = true;
+//         searchButton.style.backgroundColor = '#ccc'; // Opcional: estilo para mostrar que está desabilitado
+//         searchButton.style.cursor = 'not-allowed'; // Para evitar que o usuário clique
+//     }
+// }
 
-// Exemplo de como chamar a função (data após 01 de Janeiro de 2025)
-disableSearchButtonAfterDate('2025-04-20T23:59:59');
+// // Exemplo de como chamar a função (data após 01 de Janeiro de 2025)
+// disableSearchButtonAfterDate('2025-04-20T23:59:59');
 
       
 // Função para abrir a modal com detalhes do presente
@@ -493,3 +493,5 @@ function copyToClipboard() {
       console.error("Erro ao copiar para a área de transferência: ", error);
     });
   }
+
+document.getElementById("botaoBuscaConvidado").disabled = true;
