@@ -31,43 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 }); 
 
-// Contagem regressiva
-function startCountdown(targetDate) {
-    const countdownElement = document.getElementById('countdown');
-    const daysSpan = document.getElementById('days');
-    const hoursSpan = document.getElementById('hours');
-    const minutesSpan = document.getElementById('minutes');
-    const secondsSpan = document.getElementById('seconds');
-
-    function updateCountdown() {
-        const now = new Date();
-        const timeLeft = targetDate - now;
-
-        if (timeLeft <= 0) {
-            countdownElement.innerHTML = "<h3>Chegou o grande dia!</h3>";
-            clearInterval(interval);
-            return;
-        }
-
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        daysSpan.textContent = days;
-        hoursSpan.textContent = hours;
-        minutesSpan.textContent = minutes;
-        secondsSpan.textContent = seconds;
-    }
-
-    updateCountdown();
-        const interval = setInterval(updateCountdown, 1000);
-}
-
-// Data da festa: substitua pelo dia e horário do evento
-const targetDate = new Date('2025-05-03T20:00:00');
-startCountdown(targetDate);
-
 
 // Confirmação de presença
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwDaG55QHZx7JrgJDbb1volxtSRQK-BN4bZemJLsJb4lq06jdlVqKP7kGtmmqIZZmbVrQ/exec';
@@ -495,3 +458,40 @@ function copyToClipboard() {
   }
 
 document.getElementById("botaoBuscaConvidado").disabled = true;
+
+// Contagem regressiva
+function startCountdown(targetDate) {
+    const countdownElement = document.getElementById('countdown');
+    const daysSpan = document.getElementById('days');
+    const hoursSpan = document.getElementById('hours');
+    const minutesSpan = document.getElementById('minutes');
+    const secondsSpan = document.getElementById('seconds');
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft <= 0) {
+            countdownElement.innerHTML = "<h3>Chegou o grande dia!</h3>";
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        daysSpan.textContent = days;
+        hoursSpan.textContent = hours;
+        minutesSpan.textContent = minutes;
+        secondsSpan.textContent = seconds;
+    }
+
+    updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+}
+
+// Data da festa: substitua pelo dia e horário do evento
+const targetDate = new Date('2025-05-03T20:00:00');
+startCountdown(targetDate);
